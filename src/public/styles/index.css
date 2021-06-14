@@ -1,0 +1,50 @@
+:root {
+  --background: #2f2f2f;
+}
+
+body {
+  background-color: #dbdbdb;
+}
+
+header {
+  background-color: var(--background);
+  color: #e0e0e0;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
+header nav a:hover {
+  transition: color 0.2s;
+  color: #c0c0c0;
+}
+
+header nav a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.5s ease-in-out;
+}
+header nav a:focus:after {
+  width: 100%;
+}
+
+footer {
+  background-color: var(--background);
+  color: #e0e0e0;
+}
+
+footer .author {
+  color: #99aab5;
+}
+
+footer .author:hover {
+  transition: all 0.3s;
+  color: #b7cddb;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binario Sequêncial</title>
+    <link rel="shortcut icon" href="./images/binario.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/tools.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <%- include ('./partials/header') %>
+
+        <!-- TITLE -->
+        <h1><strong>Calculadora de Binario Sequêncial</strong></h1>
+        <img class="icon" style="height: 60px; margin-bottom: 2vh;" src=" ./images/binario.png" alt="Imagem de Binário">
+        <h2>Criptografia criada por zF4ke#8556</h2>
+        <h4>
+            <p id="errors" style="color: #D24D2F;"></p>
+        </h4>
+
+        <!-- TOOL -->
+        <div class="area">
+            <textarea id="encodedData" placeholder="643216 64321 6432162 64321 64322 643241 6432842 64321621" rows="20"
+                cols="70" style="height: 15vh;"></textarea>
+        </div>
+        <div class="centerwrapper">
+            <input type="button" class="btn" value="Analisar" onclick="doAnalyze()">
+        </div>
+        <div class="area">
+            <textarea id="decodedData" placeholder="*Resultado em binário*" rows="70" cols="70" style="height: 15vh;"
+                readonly></textarea>
+            <textarea id="textData" placeholder="*Resultado em texto*" rows="70" cols="70" style="height: 15vh;"
+                readonly></textarea>
+        </div>
+        <div class="befooter"></div>
+
+        <!-- FOOTER -->
+        <%- include ('./partials/footer') %>
+
+            <script src="./scripts/binario.js"></script>
+            <script src="./scripts/scroll.js"></script>
+
+</body>
+
+</html>

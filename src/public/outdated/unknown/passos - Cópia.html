@@ -1,0 +1,2214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma de Passos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+        body {
+            background-color: #F2F2F2;
+            
+        }
+        h1 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 30pt Roboto;
+        }
+        h2 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 12pt Roboto;
+        }
+        h4 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 10pt Roboto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 8px 14px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background: rgb(214, 46, 46);
+            position:absolute;
+            top: 5%;
+            right: 5%;
+        }
+
+        .btn-traduzir-pt {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 8px 16px;
+            font-size: 17px;
+            line-height: 1.42857143;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background: rgb(22, 139, 185);
+            color: rgb(238, 238, 238);
+            font-weight: bold;
+        }
+
+        .btn2 {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 8px 14px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background: rgb(22, 185, 109);
+        }
+
+        .incompleto {
+            color:  rgb(221, 221, 221);
+            font: normal 14pt Roboto;
+        }
+
+        .butao {
+            background: rgb(31, 216, 87);
+            font: normal 14pt Roboto;
+
+        }
+
+        .footer {
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(167, 167, 167);
+            color:  rgb(44, 47, 51);
+            font: normal 12pt Roboto;
+        }
+
+
+        .caixas {
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+ 
+        }
+
+        .box {
+            border: solid 2px rgb(189, 189, 189);
+            background-color: white;
+            width: 30vw;
+            overflow:scroll;
+            overflow-x:hi22en;
+            overflow-y:hi22en;
+        }
+
+        .texto {
+            font: normal 15pt Arial;   
+        }
+
+        .bugs {
+            text-align: center;
+            bottom: 10vw;
+        }
+
+        .linhas {
+            text-align: center;
+            bottom: 10vw;
+            font: normal 15pt Roboto;
+        }
+
+
+        #Arkadian {
+            float: left;
+        }
+
+        #Portugues {
+            float: right;
+        }
+
+        @media (min-width: 1px) {
+            
+            .btn {
+                top: -100%;
+                right: 2%;
+            }
+            .incompleto {
+            color:  rgb(221, 221, 221);
+            font: normal 8pt Roboto;
+            }
+            h1 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 20pt Roboto;
+            }
+            h2 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 12pt Roboto;
+            }
+            h4 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 10pt Roboto;
+            }
+            .btn-traduzir-pt {
+            padding: 8px 10px;
+            font-size: 8px;
+            }
+            .bug-text {
+            font-size: 8pt;
+            }
+            .footer-text {
+            font-size: 8pt;
+            }
+            .texto {
+            font-size: 10pt;
+            }
+        }
+        @media (min-width: 330px) {
+            
+            .btn {
+                top: -100%;
+                right: 2%;
+            }
+            .incompleto {
+            color:  rgb(221, 221, 221);
+            font: normal 8pt Roboto;
+            }
+            h1 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 20pt Roboto;
+            }
+            h2 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 12pt Roboto;
+            }
+            h4 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 10pt Roboto;
+            }
+            .btn-traduzir-pt {
+            padding: 8px 16px;
+            font-size: 11px;
+            }
+            .bug-text {
+            font-size: 9pt;
+            }
+            .footer-text {
+            font-size: 9pt;
+            }
+            .texto {
+            font-size: 10pt;
+            }
+        }
+        @media (min-width: 360px) {
+            
+            .btn {
+                top: -100%;
+                right: 2%;
+            }
+            .incompleto {
+            color:  rgb(221, 221, 221);
+            font: normal 8pt Roboto;
+            }
+            h1 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 20pt Roboto;
+            }
+            h2 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 12pt Roboto;
+            }
+            h4 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 10pt Roboto;
+            }
+            .btn-traduzir-pt {
+            padding: 8px 16px;
+            font-size: 10px;
+            }
+            .bug-text {
+            font-size: 9pt;
+            }
+            .footer-text {
+            font-size: 9pt;
+            }
+            .texto {
+            font-size: 10pt;
+            }
+        }
+        @media (min-width: 400px) {
+            
+            .btn {
+                top: -100%;
+                right: 2%;
+            }
+            .incompleto {
+            color:  rgb(221, 221, 221);
+            font: normal 8pt Roboto;
+            }
+            h1 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 20pt Roboto;
+            }
+            h2 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 12pt Roboto;
+            }
+            h4 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 10pt Roboto;
+            }
+            .btn-traduzir-pt {
+            padding: 8px 16px;
+            font-size: 11px;
+            }
+            .bug-text {
+            font-size: 9pt;
+            }
+            .footer-text {
+            font-size: 9pt;
+            }
+            .texto {
+            font-size: 11pt;
+            }
+        }
+        @media (min-width: 600px) {
+            
+            .btn {
+                top: -100%;
+                right: 2%;
+            }
+            .incompleto {
+            color:  rgb(221, 221, 221);
+            font: normal 8pt Roboto;
+            }
+            h1 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 20pt Roboto;
+            }
+            h2 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 12pt Roboto;
+            }
+            h4 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 10pt Roboto;
+            }
+            .btn-traduzir-pt {
+            padding: 8px 16px;
+            font-size: 12px;
+            }
+            .bug-text {
+            font-size: 10pt;
+            }
+            .footer-text {
+            font-size: 10pt;
+            }
+            .texto {
+            font-size: 12pt;
+            }
+        }
+        @media (min-width: 770px) {
+            
+            .btn {
+                top: -100%;
+                right: 2%;
+            }
+            .incompleto {
+            color:  rgb(221, 221, 221);
+            font: normal 8pt Roboto;
+            }
+            h1 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 22pt Roboto;
+            }
+            h2 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 12pt Roboto;
+            }
+            h4 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 10pt Roboto;
+            }
+            .btn-traduzir-pt {
+            padding: 8px 16px;
+            font-size: 13px;
+            }
+            .bug-text {
+            font-size: 11pt;
+            }
+            .footer-text {
+            font-size: 11pt;
+            }
+            .texto {
+            font-size: 12pt;
+            }
+        }
+        @media (min-width: 880px) {
+            
+            .btn {
+                top: 5%;
+                right: 2%;
+            }
+            .incompleto {
+            color:  rgb(221, 221, 221);
+            font: normal 8pt Roboto;
+            }
+            h1 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 25pt Roboto;
+            }
+            h2 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 12pt Roboto;
+            }
+            h4 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 10pt Roboto;
+            }
+            .btn-traduzir-pt {
+            padding: 8px 16px;
+            font-size: 14px;
+            }
+            .footer-text {
+            font-size: 12pt;
+            }
+            .texto {
+            font-size: 13pt;
+            }
+        }
+        @media (min-width: 930px) {
+            
+            .btn {
+                top: 5%;
+                right: 2%;
+            }
+            .incompleto {
+            color:  rgb(221, 221, 221);
+            font: normal 10pt Roboto;
+            }
+            h1 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 25pt Roboto;
+            }
+            h2 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 12pt Roboto;
+            }
+            h4 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 10pt Roboto;
+            }
+            .btn-traduzir-pt {
+            padding: 8px 16px;
+            font-size: 15px;
+            }
+            .bug-text {
+            font-size: 13pt;
+            }
+            .footer-text {
+            font-size: 13pt;
+            }
+            .texto {
+            font-size: 14pt;
+            }
+        }
+        @media (min-width: 1050px) {
+            .btn {
+                top: 5%;
+                right: 2%;
+            }
+            .incompleto {
+            color:  rgb(221, 221, 221);
+            font: normal 12pt Roboto;
+            }
+            h1 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 30pt Roboto;
+            }
+            h2 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 15pt Roboto;
+            }
+            h4 {
+            text-align: center;
+            color:  rgb(44, 47, 51);
+            font: normal 10pt Roboto;
+            }
+            .btn-traduzir-pt {
+            padding: 8px 16px;
+            font-size: 16px;
+            }
+            .bug-text {
+            font-size: 10pt;
+            }
+            .footer-text {
+            font-size: 12pt;
+            }
+            .texto {
+            font-size: 15pt;
+            }
+        }
+        @media (min-width: 1200px) {
+            .btn {
+                font-size: 14px;
+                top: 5%;
+                right: 5%;
+            }
+            .incompleto {
+            color:  rgb(221, 221, 221);
+            font: normal 14pt Roboto;
+            }
+            .btn-traduzir-pt {
+            padding: 8px 16px;
+            font-size: 17px;
+            }
+            .bug-text {
+            font-size: 15pt;
+            }
+            
+            .footer-text {
+            font-size: 15pt;
+            }
+            .texto {
+            font-size: 15pt;
+            }
+        }
+        
+        .centerwrapper {
+        text-align: center;
+        }
+        textarea {
+        resize: none;
+        overflow:auto;
+        font-size: 20px;
+        font-family: 'Source Code Pro', monospace;
+        }   
+    </style>
+      <link rel="stylesheet" href="switch.css">
+</head>
+<body>
+    <h1><strong>Calculadora de Enigma de Passos</strong></h1>
+    <h2>Versão 1.2 criada por zF4ke#8556</h2>
+    <h4>Compatibilidade para dispositivos móveis sendo desenvolvida.<br>Eu não sei se acabei mas o A1Z26 vai dar trabalho.<p style="color: red;">Isto não resolve totalmente o enigma mas dá uma base em questão de segundos para testar novas possibilidades. Bugs são esperados, se quer perfeito programa uma I.A.<br>Maximo de 5 linhas (por enquanto). (Vou deixar pra fazer os "-" e os "+" pra ultimo por isso por enquanto eles só desaparecem.</p></h4>
+    <div class="btn"><a class="incompleto">A calculadora não é 100% precisa.</a></div>
+    <br>
+    <ul class="centerwrapper">
+        <li>
+            <input id="s1d" type="checkbox" class="switch" checked disabled>
+            <label style="font-family: Inter, Arial, sans-serif;" for="s1d">Passo a passo</label>
+        </li>
+        <li>
+            <input id="s1d" type="checkbox" class="switch">
+            <label style="font-family: Inter, Arial, sans-serif;" for="s1d">Auto A1Z26</label>
+        </li>
+    </ul>
+    <ul class="centerwrapper">
+        <li style="display: inline;">
+            <input id="r1" type="radio" name="radio" value="1" >
+            <label for="r1">Metodo 1</label>
+          </li>
+          <li style="display: inline;">
+            <input id="r2" type="radio" name="radio" value="2" checked>
+            <label for="r2">Metodo 2</label>
+          </li>
+    </ul>
+    <div class="linhas">
+        <label for="linha1">L1:</label>
+        <input type="text" id="linha1" name="linha1">
+        <label for="linha2">L2:</label>
+        <input type="text" id="linha2" name="linha2">   
+        <label for="linha3">L3:</label>
+        <input type="text" id="linha3" name="linha3"><br>
+        <label for="linha4">L4:</label>
+        <input type="text" id="linha4" name="linha4">
+        <label for="linha5">L5:</label>
+        <input type="text" id="linha5" name="linha5"> 
+    </div>
+    <br><br>
+    <div class="bugs">
+        <input type="button" class="btn-traduzir-pt" value="Analisar" onclick="doAnalyze()">
+    </div>
+    <br>
+    <div class="centerwrapper">
+        <textarea id="analizado" rows="20" cols="100" style="height: 25vh;" readonly></textarea>
+        <textarea id="resultados" rows="200" cols="100" style="position: absolute;left: -999em;height: 40vh;" readonly></textarea>
+    </div>
+    <div class="bugs">
+    <input type="button" class="btn-traduzir-pt" value="Proximo" style="margin-top: 1vh;" onclick="testAll()">
+    </div>
+    <br>
+    <div class="centerwrapper" style="font: normal 12pt Roboto;margin-bottom: 11vh;">
+    <h3>Bugs encontrados?<br> <a href="mailto:pedrohsilva955@gmail.com">Clique aqui!</a> ou envie um email para <strong>pedrohsilva955@gmail.com</strong></h3>
+    <h3>Ou (se conseguir) envie pelo discord mesmo e-e</h3>
+    </div>
+    <footer class="footer">
+        <p class="footer-text">Calculadora Online criada para ajudar na resolução dos enigmas do Cassim. <br><em>zF4ke#8556</em> &copy;</p>
+    </footer>
+    <script>
+        function doAnalyze() {
+
+//METODO 1     
+            if(document.getElementById("r1").checked == true) {
+            //reseta
+            document.getElementById('analizado').value = " ";
+            
+            console.log("zf4ke.debug - linha1")
+            var rlinha1 = document.getElementById('linha1').value;
+
+            //separa
+            var rlinha1 = rlinha1.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            var rlinha1 = rlinha1.replace(/4444/g,"22222222").replace(/444/g,"222222").replace(/44/g,"2222").replace(/4/g,"22").replace(/2222/g,"11111111").replace(/222/g,"111111").replace(/22/g,"1111").replace(/2/g,"11").replace(/8888/g,"00000000").replace(/888/g,"000000").replace(/88/g,"0000").replace(/8/g,"00")
+            var rlinha1 = rlinha1.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            //mostra o resultado
+
+            console.log(rlinha1)
+
+            document.getElementById('analizado').value = rlinha1;
+
+            console.log("zf4ke.debug - linha2")
+            var rlinha2 = document.getElementById('linha2').value;
+            var rlinha2 = rlinha2.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            var rlinha2 = rlinha2.replace(/4444/g,"22222222").replace(/444/g,"222222").replace(/44/g,"2222").replace(/4/g,"22").replace(/2222/g,"11111111").replace(/222/g,"111111").replace(/22/g,"1111").replace(/2/g,"11").replace(/8888/g,"00000000").replace(/888/g,"000000").replace(/88/g,"0000").replace(/8/g,"00")
+            var rlinha2 = rlinha2.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+
+            document.getElementById('analizado').value += "\n" + rlinha2;
+
+            console.log("zf4ke.debug - linha3")
+            var rlinha3 = document.getElementById('linha3').value;
+            var rlinha3 = rlinha3.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            var rlinha3 = rlinha3.replace(/4444/g,"22222222").replace(/444/g,"222222").replace(/44/g,"2222").replace(/4/g,"22").replace(/2222/g,"11111111").replace(/222/g,"111111").replace(/22/g,"1111").replace(/2/g,"11").replace(/8888/g,"00000000").replace(/888/g,"000000").replace(/88/g,"0000").replace(/8/g,"00")
+            var rlinha3 = rlinha3.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+
+            document.getElementById('analizado').value += "\n" + rlinha3;
+
+            console.log("zf4ke.debug - linha4")            
+            var rlinha4 = document.getElementById('linha4').value;
+            var rlinha4 = rlinha4.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            var rlinha4 = rlinha4.replace(/4444/g,"22222222").replace(/444/g,"222222").replace(/44/g,"2222").replace(/4/g,"22").replace(/2222/g,"11111111").replace(/222/g,"111111").replace(/22/g,"1111").replace(/2/g,"11").replace(/8888/g,"00000000").replace(/888/g,"000000").replace(/88/g,"0000").replace(/8/g,"00")
+            var rlinha4 = rlinha4.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+
+            document.getElementById('analizado').value += "\n" + rlinha4;
+            
+            console.log("zf4ke.debug - linha5")            
+            var rlinha5 = document.getElementById('linha5').value;
+            var rlinha5 = rlinha5.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            var rlinha5 = rlinha5.replace(/4444/g,"22222222").replace(/444/g,"222222").replace(/44/g,"2222").replace(/4/g,"22").replace(/2222/g,"11111111").replace(/222/g,"111111").replace(/22/g,"1111").replace(/2/g,"11").replace(/8888/g,"00000000").replace(/888/g,"000000").replace(/88/g,"0000").replace(/8/g,"00")
+            var rlinha5 = rlinha5.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+
+
+            document.getElementById('analizado').value += "\n" + rlinha5;
+            }
+
+//METODO 2
+
+            if(document.getElementById("r2").checked == true) {
+
+            //reseta
+            document.getElementById('analizado').value = " ";
+             
+            console.log("zf4ke.debug - linha1")
+            var rlinha1m2 = document.getElementById('linha1').value;
+
+            var rlinha1e4 = 2;
+
+            if(rlinha1m2.search("4") > -1)
+            {
+                var rlinha1e4 = 1;
+            }
+            if(rlinha1m2.search("4") < 0)
+            {
+                var rlinha1e4 = 0;
+            }
+            //separa
+            var rlinha1m2 = rlinha1m2.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            var rlinha1m2 = rlinha1m2.replace(/4444/g,"2222p2222").replace(/444/g,"222p222").replace(/44/g,"22p22").replace(/4/g,"2p2").replace(/2222/g,"1111p1111").replace(/222/g,"111p111").replace(/22/g,"11p11").replace(/2/g,"1p1").replace(/8888/g,"0000p0000").replace(/888/g,"000p000").replace(/88/g,"00p00").replace(/8/g,"0p0")
+
+            var rlinha1m2 = rlinha1m2.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            var rlinha1p1s0 = 0;
+            var rlinha1p1s1 = 0;
+
+            var rlinha1p2s0 = 0;
+            var rlinha1p2s1 = 0;
+            var rlinha1p2 = 0;
+
+            var rlinha1p3s0 = 0;
+            var rlinha1p3s1 = 0;
+            var rlinha1p3 = 0;
+
+            var rlinha1p4s0 = 0;
+            var rlinha1p4s1 = 0;
+            var rlinha1p4 = 0;
+
+            var rlinhap1 = rlinha1m2.match(/p/g)
+
+            if(rlinha1e4 == 0)
+            {
+                
+            //p0
+                var rlinha1o0 = rlinha1m2.match(/p0/g)
+                if (rlinha1m2.match(/p0/g) != null) {
+                    var rlinha1o0 = rlinha1o0.length
+                }
+                if (rlinha1m2.match(/p0/g) == null) {
+                    var rlinha1o0 = 0
+                }
+            //p00
+                var rlinha1o00 = rlinha1m2.match(/p00/g)
+                if (rlinha1m2.match(/p00/g) != null) {
+                    var rlinha1o00 = rlinha1o00.length
+                }
+                if (rlinha1m2.match(/p00/g) == null) {
+                    var rlinha1o00 = 0
+                }
+            //p000
+                var rlinha1o000 = rlinha1m2.match(/p000/g)
+                if (rlinha1m2.match(/p000/g) != null) {
+                    var rlinha1o000 = rlinha1o000.length
+                }
+                if (rlinha1m2.match(/p000/g) == null) {
+                    var rlinha1o000 = 0
+                }
+            //p0000
+                var rlinha1o0000 = rlinha1m2.match(/p0000/g)
+                if (rlinha1m2.match(/p0000/g) != null) {
+                    var rlinha1o0000 = rlinha1o0000.length
+                }
+                if (rlinha1m2.match(/p0000/g) == null) {
+                    var rlinha1o0000 = 0
+                }
+
+
+            //p1
+                var rlinha1o1 = rlinha1m2.match(/p1/g)
+                if (rlinha1m2.match(/p1/g) != null) {
+                    var rlinha1o1 = rlinha1o1.length
+                }
+                if (rlinha1m2.match(/p1/g) == null) {
+                    var rlinha1o1 = 0
+                }
+            //p11
+                var rlinha1o11 = rlinha1m2.match(/p11/g)
+                if (rlinha1m2.match(/p11/g) != null) {
+                    var rlinha1o11 = rlinha1o11.length
+                }
+                if (rlinha1m2.match(/p11/g) == null) {
+                    var rlinha1o11 = 0
+                }
+            //p111
+                var rlinha1o111 = rlinha1m2.match(/p111/g)
+                if (rlinha1m2.match(/p111/g) != null) {
+                    var rlinha1o111 = rlinha1o111.length
+                }
+                if (rlinha1m2.match(/p111/g) == null) {
+                    var rlinha1o111 = 0
+                }
+            //p1111
+                var rlinha1o1111 = rlinha1m2.match(/p1111/g)
+                if (rlinha1m2.match(/p1111/g) != null) {
+                    var rlinha1o1111 = rlinha1o1111.length
+                }
+                if (rlinha1m2.match(/p1111/g) == null) {
+                    var rlinha1o1111 = 0
+                }
+
+                var rlinha1p1 = rlinha1m2.replace(/ /g,"").length - rlinha1o0 - rlinha1o00 - rlinha1o000 - rlinha1o0000 - rlinha1o1 - rlinha1o11 - rlinha1o111 - rlinha1o1111
+
+  
+
+                if((rlinha1m2.match(/p/g)) == null){
+                    var rlinha1p1 = rlinha1p1
+                }
+
+                if((rlinha1m2.match(/p/g)) != null){
+                    var rlinha1p1 = rlinha1p1 - (rlinha1m2.match(/p/g)).length
+                }
+
+                
+
+                var rlinha1p2s0 = rlinha1o0 + rlinha1o00 + rlinha1o000 + rlinha1o0000
+                var rlinha1p2s1 = rlinha1o1 + rlinha1o11 + rlinha1o111 + rlinha1o1111
+                var rlinha1p2 = rlinha1p2s0 + rlinha1p2s1
+
+
+                if(rlinha1m2.search("0") > -1){
+                    if(rlinha1m2.search("1") > -1) {
+                        rlinha1p1s1 = rlinha1m2.match(/1/g).length - rlinha1p2s1 - rlinha1p3s1 - rlinha1p4s1
+                        rlinha1p1s0 = rlinha1m2.match(/0/g).length - rlinha1p2s0 - rlinha1p3s0 - rlinha1p4s0
+                        console.log("a")
+                    }
+                    if(rlinha1m2.search("1") < 0) {
+                        rlinha1p1s0 = rlinha1m2.match(/0/g).length - rlinha1p2s0 - rlinha1p3s0 - rlinha1p4s0
+                        console.log("b")
+                    }
+                }
+                if(rlinha1m2.search("0") < 0){
+                    if(rlinha1m2.search("1") > -1) {
+                        rlinha1p1s1 = rlinha1m2.match(/1/g).length - rlinha1p2s1 - rlinha1p3s1 - rlinha1p4s1
+                        console.log("c")
+                    }
+                }
+                
+                console.log(rlinha1p1)
+                console.log(rlinha1p2)
+                console.log(rlinha1p3)
+                console.log(rlinha1p4)
+                console.log(rlinha1m2.search("0"))
+                console.log(rlinha1m2.search("1"))
+                console.log("1 " + rlinha1m2.match(/1/g).length)
+                console.log("0 " + rlinha1m2.match(/0/g).length)
+                console.log()
+                console.log(rlinha1m2.match(/1/g).length - rlinha1p2s0 - rlinha1p3s0 - rlinha1p4s0)
+                console.log(rlinha1m2.match(/0/g).length - rlinha1p2s1 - rlinha1p3s1 - rlinha1p4s1)
+
+                console.log("Linha 1 | P1 - #:" + rlinha1p1)
+                console.log("Linha 1 | P1 - 0:" + rlinha1p1s0)
+                console.log("Linha 1 | P1 - 1:" + rlinha1p1s1)
+                console.log("")
+                console.log("Linha 1 | P2 - #:" + rlinha1p2)
+                console.log("Linha 1 | P2 - 0:" + rlinha1p2s0)
+                console.log("Linha 1 | P2 - 1:" + rlinha1p2s1)
+                console.log("")
+                console.log("Linha 1 | P3 - #:" + rlinha1p3)
+                console.log("Linha 1 | P3 - 0:" + rlinha1p3s0)
+                console.log("Linha 1 | P3 - 1:" + rlinha1p3s1)
+                console.log("")
+                console.log("Linha 1 | P4 - #:" + rlinha1p4)
+                console.log("Linha 1 | P4 - 0:" + rlinha1p4s0)
+                console.log("Linha 1 | P4 - 1:" + rlinha1p4s1)
+            }
+
+            if(rlinha1e4 == 1)
+            {
+
+            }
+
+            document.getElementById('analizado').value = rlinha1m2;  
+
+//LINHA 2
+
+            console.log("zf4ke.debug - linha2")
+            var rlinha2m2 = document.getElementById('linha2').value;
+
+            var rlinha2e4 = 2;
+
+            if(rlinha2m2.search("4") > -1)
+            {
+                var rlinha2e4 = 1;
+            }
+            if(rlinha2m2.search("4") < 0)
+            {
+                var rlinha2e4 = 0;
+            }
+            console.log(rlinha2e4)
+            //separa
+            var rlinha2m2 = rlinha2m2.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            var rlinha2m2 = rlinha2m2.replace(/4444/g,"2222p2222").replace(/444/g,"222p222").replace(/44/g,"22p22").replace(/4/g,"2p2").replace(/2222/g,"1111p1111").replace(/222/g,"111p111").replace(/22/g,"11p11").replace(/2/g,"1p1").replace(/8888/g,"0000p0000").replace(/888/g,"000p000").replace(/88/g,"00p00").replace(/8/g,"0p0")
+
+            var rlinha2p1s0 = 0;
+            var rlinha2p1s1 = 0;
+
+            var rlinha2p2s0 = 0;
+            var rlinha2p2s1 = 0;
+            var rlinha2p2 = 0;
+
+            var rlinha2p3s0 = 0;
+            var rlinha2p3s1 = 0;
+            var rlinha2p3 = 0;
+
+            var rlinha2p4s0 = 0;
+            var rlinha2p4s1 = 0;
+            var rlinha2p4 = 0;
+
+            var rlinhap2 = rlinha2m2.match(/p/g)
+
+            if(rlinha2e4 == 0)
+            {
+                
+            //p0
+                var rlinha2o0 = rlinha2m2.match(/p0/g)
+                if (rlinha2m2.match(/p0/g) != null) {
+                    var rlinha2o0 = rlinha2o0.length
+                }
+                if (rlinha2m2.match(/p0/g) == null) {
+                    var rlinha2o0 = 0
+                }
+            //p00
+                var rlinha2o00 = rlinha2m2.match(/p00/g)
+                if (rlinha2m2.match(/p00/g) != null) {
+                    var rlinha2o00 = rlinha2o00.length
+                }
+                if (rlinha2m2.match(/p00/g) == null) {
+                    var rlinha2o00 = 0
+                }
+            //p000
+                var rlinha2o000 = rlinha2m2.match(/p000/g)
+                if (rlinha2m2.match(/p000/g) != null) {
+                    var rlinha2o000 = rlinha2o000.length
+                }
+                if (rlinha2m2.match(/p000/g) == null) {
+                    var rlinha2o000 = 0
+                }
+            //p0000
+                var rlinha2o0000 = rlinha2m2.match(/p0000/g)
+                if (rlinha2m2.match(/p0000/g) != null) {
+                    var rlinha2o0000 = rlinha2o0000.length
+                }
+                if (rlinha2m2.match(/p0000/g) == null) {
+                    var rlinha2o0000 = 0
+                }
+
+
+            //p1
+                var rlinha2o1 = rlinha2m2.match(/p1/g)
+                if (rlinha2m2.match(/p1/g) != null) {
+                    var rlinha2o1 = rlinha2o1.length
+                }
+                if (rlinha2m2.match(/p1/g) == null) {
+                    var rlinha2o1 = 0
+                }
+            //p11
+                var rlinha2o11 = rlinha2m2.match(/p11/g)
+                if (rlinha2m2.match(/p11/g) != null) {
+                    var rlinha2o11 = rlinha2o11.length
+                }
+                if (rlinha2m2.match(/p11/g) == null) {
+                    var rlinha2o11 = 0
+                }
+            //p111
+                var rlinha2o111 = rlinha2m2.match(/p111/g)
+                if (rlinha2m2.match(/p111/g) != null) {
+                    var rlinha2o111 = rlinha2o111.length
+                }
+                if (rlinha2m2.match(/p111/g) == null) {
+                    var rlinha2o111 = 0
+                }
+            //p1111
+                var rlinha2o1111 = rlinha2m2.match(/p1111/g)
+                if (rlinha2m2.match(/p1111/g) != null) {
+                    var rlinha2o1111 = rlinha2o1111.length
+                }
+                if (rlinha2m2.match(/p1111/g) == null) {
+                    var rlinha2o1111 = 0
+                }
+
+                var rlinha2p1 = rlinha2m2.replace(/ /g,"").length - rlinha2o0 - rlinha2o00 - rlinha2o000 - rlinha2o0000 - rlinha2o1 - rlinha2o11 - rlinha2o111 - rlinha2o1111
+                
+                if((rlinha2m2.match(/p/g)) == null){
+                    var rlinha2p1 = rlinha2p1
+                }
+
+                if((rlinha2m2.match(/p/g)) != null){
+                    var rlinha2p1 = rlinha2p1 - (rlinha2m2.match(/p/g)).length
+                }
+                
+
+                
+                }
+
+
+                var rlinha2p2s0 = rlinha2o0 + rlinha2o00 + rlinha2o000 + rlinha2o0000
+                var rlinha2p2s1 = rlinha2o1 + rlinha2o11 + rlinha2o111 + rlinha2o1111
+                var rlinha2p2 = rlinha2p2s0 + rlinha2p2s1
+
+                if(rlinha2m2.search("0") > -1){
+                    if(rlinha2m2.search("1") > -1) {
+                        rlinha2p1s1 = rlinha2m2.match(/1/g).length - rlinha2p2s1 - rlinha2p3s1 - rlinha2p4s1
+                        rlinha2p1s0 = rlinha2m2.match(/0/g).length - rlinha2p2s0 - rlinha2p3s0 - rlinha2p4s0
+                        console.log("a")
+                    }
+                    if(rlinha2m2.search("1") < 0) {
+                        rlinha2p1s0 = rlinha2m2.match(/0/g).length - rlinha2p2s0 - rlinha2p3s0 - rlinha2p4s0
+                        console.log("b")
+                    }
+                }
+                if(rlinha2m2.search("0") < 0){
+                    if(rlinha2m2.search("1") > -1) { 
+                        rlinha2p1s1 = rlinha2m2.match(/1/g).length - rlinha2p2s1 - rlinha2p3s1 - rlinha2p4s1
+                        console.log("c")
+                    }
+                }
+
+
+
+                console.log(rlinha2p1)
+
+                console.log("Linha 2 | P1 - #:" + rlinha2p1)
+                console.log("Linha 2 | P1 - 0:" + rlinha2p1s0)
+                console.log("Linha 2 | P1 - 1:" + rlinha2p1s1)
+                console.log("")
+                console.log("Linha 2 | P2 - #:" + rlinha2p2)
+                console.log("Linha 2 | P2 - 0:" + rlinha2p2s0)
+                console.log("Linha 2 | P2 - 1:" + rlinha2p2s1)
+                console.log("")
+                console.log("Linha 2 | P3 - #:" + rlinha2p3)
+                console.log("Linha 2 | P3 - 0:" + rlinha2p3s0)
+                console.log("Linha 2 | P3 - 1:" + rlinha2p3s1)
+                console.log("")
+                console.log("Linha 2 | P4 - #:" + rlinha2p4)
+                console.log("Linha 2 | P4 - 0:" + rlinha2p4s0)
+                console.log("Linha 2 | P4 - 1:" + rlinha2p4s1)
+
+            if(rlinha2e4 == 1)
+            {
+
+            }
+
+            document.getElementById('analizado').value += "\n" + rlinha2m2;  
+
+//LINHA 3
+
+            console.log("zf4ke.debug - linha3")
+            var rlinha3m2 = document.getElementById('linha3').value;
+
+            var rlinha3e4 = 2;
+
+            if(rlinha3m2.search("4") > -1)
+            {
+                var rlinha3e4 = 1;
+            }
+            if(rlinha3m2.search("4") < 0)
+            {
+                var rlinha3e4 = 0;
+            }
+            console.log(rlinha3e4)
+            //separa
+            var rlinha3m2 = rlinha3m2.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            var rlinha3m2 = rlinha3m2.replace(/4444/g,"2222p2222").replace(/444/g,"222p222").replace(/44/g,"22p22").replace(/4/g,"2p2").replace(/2222/g,"1111p1111").replace(/222/g,"111p111").replace(/22/g,"11p11").replace(/2/g,"1p1").replace(/8888/g,"0000p0000").replace(/888/g,"000p000").replace(/88/g,"00p00").replace(/8/g,"0p0")
+
+            var rlinha3p1s0 = 0;
+            var rlinha3p1s1 = 0;
+
+            var rlinha3p2s0 = 0;
+            var rlinha3p2s1 = 0;
+            var rlinha3p2 = 0;
+
+            var rlinha3p3s0 = 0;
+            var rlinha3p3s1 = 0;
+            var rlinha3p3 = 0;
+
+            var rlinha3p4s0 = 0;
+            var rlinha3p4s1 = 0;
+            var rlinha3p4 = 0;
+
+            var rlinhap2 = rlinha3m2.match(/p/g)
+
+            if(rlinha3e4 == 0)
+            {
+                
+            //p0
+                var rlinha3o0 = rlinha3m2.match(/p0/g)
+                if (rlinha3m2.match(/p0/g) != null) {
+                    var rlinha3o0 = rlinha3o0.length
+                }
+                if (rlinha3m2.match(/p0/g) == null) {
+                    var rlinha3o0 = 0
+                }
+            //p00
+                var rlinha3o00 = rlinha3m2.match(/p00/g)
+                if (rlinha3m2.match(/p00/g) != null) {
+                    var rlinha3o00 = rlinha3o00.length
+                }
+                if (rlinha3m2.match(/p00/g) == null) {
+                    var rlinha3o00 = 0
+                }
+            //p000
+                var rlinha3o000 = rlinha3m2.match(/p000/g)
+                if (rlinha3m2.match(/p000/g) != null) {
+                    var rlinha3o000 = rlinha3o000.length
+                }
+                if (rlinha3m2.match(/p000/g) == null) {
+                    var rlinha3o000 = 0
+                }
+            //p0000
+                var rlinha3o0000 = rlinha3m2.match(/p0000/g)
+                if (rlinha3m2.match(/p0000/g) != null) {
+                    var rlinha3o0000 = rlinha3o0000.length
+                }
+                if (rlinha3m2.match(/p0000/g) == null) {
+                    var rlinha3o0000 = 0
+                }
+
+
+            //p1
+                var rlinha3o1 = rlinha3m2.match(/p1/g)
+                if (rlinha3m2.match(/p1/g) != null) {
+                    var rlinha3o1 = rlinha3o1.length
+                }
+                if (rlinha3m2.match(/p1/g) == null) {
+                    var rlinha3o1 = 0
+                }
+            //p11
+                var rlinha3o11 = rlinha3m2.match(/p11/g)
+                if (rlinha3m2.match(/p11/g) != null) {
+                    var rlinha3o11 = rlinha3o11.length
+                }
+                if (rlinha3m2.match(/p11/g) == null) {
+                    var rlinha3o11 = 0
+                }
+            //p111
+                var rlinha3o111 = rlinha3m2.match(/p111/g)
+                if (rlinha3m2.match(/p111/g) != null) {
+                    var rlinha3o111 = rlinha3o111.length
+                }
+                if (rlinha3m2.match(/p111/g) == null) {
+                    var rlinha3o111 = 0
+                }
+            //p1111
+                var rlinha3o1111 = rlinha3m2.match(/p1111/g)
+                if (rlinha3m2.match(/p1111/g) != null) {
+                    var rlinha3o1111 = rlinha3o1111.length
+                }
+                if (rlinha3m2.match(/p1111/g) == null) {
+                    var rlinha3o1111 = 0
+                }
+
+                var rlinha3p1 = rlinha3m2.replace(/ /g,"").length - rlinha3o0 - rlinha3o00 - rlinha3o000 - rlinha3o0000 - rlinha3o1 - rlinha3o11 - rlinha3o111 - rlinha3o1111
+                
+                if((rlinha3m2.match(/p/g)) == null){
+                    var rlinha3p1 = rlinha3p1
+                }
+
+                if((rlinha3m2.match(/p/g)) != null){
+                    var rlinha3p1 = rlinha3p1 - (rlinha3m2.match(/p/g)).length
+                }
+                
+
+                
+
+
+                var rlinha3p2s0 = rlinha3o0 + rlinha3o00 + rlinha3o000 + rlinha3o0000
+                var rlinha3p2s1 = rlinha3o1 + rlinha3o11 + rlinha3o111 + rlinha3o1111
+                var rlinha3p2 = rlinha3p2s0 + rlinha3p2s1
+
+                if(rlinha3m2.search("0") > -1){
+                    if(rlinha3m2.search("1") > -1) {
+                        rlinha3p1s1 = rlinha3m2.match(/1/g).length - rlinha3p2s1 - rlinha3p3s1 - rlinha3p4s1
+                        rlinha3p1s0 = rlinha3m2.match(/0/g).length - rlinha3p2s0 - rlinha3p3s0 - rlinha3p4s0
+                        console.log("a")
+                    }
+                    if(rlinha3m2.search("1") < 0) {
+                        rlinha3p1s0 = rlinha3m2.match(/0/g).length - rlinha3p2s0 - rlinha3p3s0 - rlinha3p4s0 
+                        console.log("b")
+                    }
+                }
+                if(rlinha3m2.search("0") < 0){
+                    if(rlinha3m2.search("1") > -1) {            
+                        rlinha3p1s1 = rlinha3m2.match(/1/g).length - rlinha3p2s1 - rlinha3p3s1 - rlinha3p4s1
+                        console.log("c")
+                    }
+                }
+
+                console.log(rlinha3p1)
+
+                console.log("Linha 3 | P1 - #:" + rlinha3p1)
+                console.log("Linha 3 | P1 - 0:" + rlinha3p1s0)
+                console.log("Linha 3 | P1 - 1:" + rlinha3p1s1)
+                console.log("")
+                console.log("Linha 3 | P2 - #:" + rlinha3p2)
+                console.log("Linha 3 | P2 - 0:" + rlinha3p2s0)
+                console.log("Linha 3 | P2 - 1:" + rlinha3p2s1)
+                console.log("")
+                console.log("Linha 3 | P3 - #:" + rlinha3p3)
+                console.log("Linha 3 | P3 - 0:" + rlinha3p3s0)
+                console.log("Linha 3 | P3 - 1:" + rlinha3p3s1)
+                console.log("")
+                console.log("Linha 3 | P4 - #:" + rlinha3p4)
+                console.log("Linha 3 | P4 - 0:" + rlinha3p4s0)
+                console.log("Linha 3 | P4 - 1:" + rlinha3p4s1)
+            }
+
+            if(rlinha3e4 == 1)
+            {
+
+            }
+
+            document.getElementById('analizado').value += "\n" + rlinha3m2;  
+
+//LINHA 4
+
+            console.log("zf4ke.debug - linha4")
+            var rlinha4m2 = document.getElementById('linha4').value;
+
+            var rlinha4e4 = 2;
+
+            if(rlinha4m2.search("4") > -1)
+            {
+                var rlinha4e4 = 1;
+            }
+            if(rlinha4m2.search("4") < 0)
+            {
+                var rlinha4e4 = 0;
+            }
+            console.log(rlinha4e4)
+            //separa
+            var rlinha4m2 = rlinha4m2.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            var rlinha4m2 = rlinha4m2.replace(/4444/g,"2222p2222").replace(/444/g,"222p222").replace(/44/g,"22p22").replace(/4/g,"2p2").replace(/2222/g,"1111p1111").replace(/222/g,"111p111").replace(/22/g,"11p11").replace(/2/g,"1p1").replace(/8888/g,"0000p0000").replace(/888/g,"000p000").replace(/88/g,"00p00").replace(/8/g,"0p0")
+
+            var rlinha4p1s0 = 0;
+            var rlinha4p1s1 = 0;
+
+            var rlinha4p2s0 = 0;
+            var rlinha4p2s1 = 0;
+            var rlinha4p2 = 0;
+
+            var rlinha4p3s0 = 0;
+            var rlinha4p3s1 = 0;
+            var rlinha4p3 = 0;
+
+            var rlinha4p4s0 = 0;
+            var rlinha4p4s1 = 0;
+            var rlinha4p4 = 0;
+
+            var rlinhap2 = rlinha4m2.match(/p/g)
+
+            if(rlinha4e4 == 0)
+            {
+                
+            //p0
+                var rlinha4o0 = rlinha4m2.match(/p0/g)
+                if (rlinha4m2.match(/p0/g) != null) {
+                    var rlinha4o0 = rlinha4o0.length
+                }
+                if (rlinha4m2.match(/p0/g) == null) {
+                    var rlinha4o0 = 0
+                }
+            //p00
+                var rlinha4o00 = rlinha4m2.match(/p00/g)
+                if (rlinha4m2.match(/p00/g) != null) {
+                    var rlinha4o00 = rlinha4o00.length
+                }
+                if (rlinha4m2.match(/p00/g) == null) {
+                    var rlinha4o00 = 0
+                }
+            //p000
+                var rlinha4o000 = rlinha4m2.match(/p000/g)
+                if (rlinha4m2.match(/p000/g) != null) {
+                    var rlinha4o000 = rlinha4o000.length
+                }
+                if (rlinha4m2.match(/p000/g) == null) {
+                    var rlinha4o000 = 0
+                }
+            //p0000
+                var rlinha4o0000 = rlinha4m2.match(/p0000/g)
+                if (rlinha4m2.match(/p0000/g) != null) {
+                    var rlinha4o0000 = rlinha4o0000.length
+                }
+                if (rlinha4m2.match(/p0000/g) == null) {
+                    var rlinha4o0000 = 0
+                }
+
+
+            //p1
+                var rlinha4o1 = rlinha4m2.match(/p1/g)
+                if (rlinha4m2.match(/p1/g) != null) {
+                    var rlinha4o1 = rlinha4o1.length
+                }
+                if (rlinha4m2.match(/p1/g) == null) {
+                    var rlinha4o1 = 0
+                }
+            //p11
+                var rlinha4o11 = rlinha4m2.match(/p11/g)
+                if (rlinha4m2.match(/p11/g) != null) {
+                    var rlinha4o11 = rlinha4o11.length
+                }
+                if (rlinha4m2.match(/p11/g) == null) {
+                    var rlinha4o11 = 0
+                }
+            //p111
+                var rlinha4o111 = rlinha4m2.match(/p111/g)
+                if (rlinha4m2.match(/p111/g) != null) {
+                    var rlinha4o111 = rlinha4o111.length
+                }
+                if (rlinha4m2.match(/p111/g) == null) {
+                    var rlinha4o111 = 0
+                }
+            //p1111
+                var rlinha4o1111 = rlinha4m2.match(/p1111/g)
+                if (rlinha4m2.match(/p1111/g) != null) {
+                    var rlinha4o1111 = rlinha4o1111.length
+                }
+                if (rlinha4m2.match(/p1111/g) == null) {
+                    var rlinha4o1111 = 0
+                }
+
+                var rlinha4p1 = rlinha4m2.replace(/ /g,"").length - rlinha4o0 - rlinha4o00 - rlinha4o000 - rlinha4o0000 - rlinha4o1 - rlinha4o11 - rlinha4o111 - rlinha4o1111
+                
+                if((rlinha4m2.match(/p/g)) == null){
+                    var rlinha4p1 = rlinha4p1
+                }
+
+                if((rlinha4m2.match(/p/g)) != null){
+                    var rlinha4p1 = rlinha4p1 - (rlinha4m2.match(/p/g)).length
+                }
+                
+
+                
+
+
+                var rlinha4p2s0 = rlinha4o0 + rlinha4o00 + rlinha4o000 + rlinha4o0000
+                var rlinha4p2s1 = rlinha4o1 + rlinha4o11 + rlinha4o111 + rlinha4o1111
+                var rlinha4p2 = rlinha4p2s0 + rlinha4p2s1
+
+                if(rlinha4m2.search("0") > -1){
+                    if(rlinha4m2.search("1") > -1) {
+                        rlinha4p1s1 = rlinha4m2.match(/1/g).length - rlinha4p2s1 - rlinha4p3s1 - rlinha4p4s1
+                        rlinha4p1s0 = rlinha4m2.match(/0/g).length - rlinha4p2s0 - rlinha4p3s0 - rlinha4p4s0
+                        console.log("a")
+                    }
+                    if(rlinha4m2.search("1") < 0) {
+                        rlinha4p1s0 = rlinha4m2.match(/0/g).length - rlinha4p2s0 - rlinha4p3s0 - rlinha4p4s0
+                        console.log("b")
+                    }
+                }
+                if(rlinha4m2.search("0") < 0){
+                    if(rlinha4m2.search("1") > -1) {
+                        rlinha4p1s1 = rlinha4m2.match(/1/g).length - rlinha4p2s1 - rlinha4p3s1 - rlinha4p4s1 
+                        console.log("c")
+                    }
+                }
+
+                console.log(rlinha4p1)
+
+                console.log("Linha 4 | P1 - #:" + rlinha4p1)
+                console.log("Linha 4 | P1 - 0:" + rlinha4p1s0)
+                console.log("Linha 4 | P1 - 1:" + rlinha4p1s1)
+                console.log("")
+                console.log("Linha 4 | P2 - #:" + rlinha4p2)
+                console.log("Linha 4 | P2 - 0:" + rlinha4p2s0)
+                console.log("Linha 4 | P2 - 1:" + rlinha4p2s1)
+                console.log("")
+                console.log("Linha 4 | P3 - #:" + rlinha4p3)
+                console.log("Linha 4 | P3 - 0:" + rlinha4p3s0)
+                console.log("Linha 4 | P3 - 1:" + rlinha4p3s1)
+                console.log("")
+                console.log("Linha 4 | P4 - #:" + rlinha4p4)
+                console.log("Linha 4 | P4 - 0:" + rlinha4p4s0)
+                console.log("Linha 4 | P4 - 1:" + rlinha4p4s1)
+            }
+
+            if(rlinha4e4 == 1)
+            {
+
+            }
+
+            document.getElementById('analizado').value += "\n" + rlinha4m2;  
+            
+//LINHA 5
+
+            console.log("zf4ke.debug - linha5")
+            var rlinha5m2 = document.getElementById('linha5').value;
+
+            var rlinha5e4 = 2;
+
+            if(rlinha5m2.search("4") > -1)
+            {
+                var rlinha5e4 = 1;
+            }
+            if(rlinha5m2.search("4") < 0)
+            {
+                var rlinha5e4 = 0;
+            }
+            console.log(rlinha5e4)
+            //separa
+            var rlinha5m2 = rlinha5m2.replace(/21/g,"2 1").replace(/18/g,"1 8").replace(/08/g,"0 8").replace(/10/g,"1 0").replace(/12/g,"1 2").replace(/80/g,"8 0").replace(/81/g,"8 1").replace(/42/g,"4 2").replace(/20/g,"2 0").replace(/41/g,"4 1").replace(/48/g,"4 8").replace(/84/g,"8 4").replace(/82/g,"8 2").replace(/14/g,"1 4").replace(/40/g,"4 0").replace(/04/g,"0 4").replace(/\./g,'\n').replace(/116/g,"1 16").replace(/60/g,"6 0")
+
+            var rlinha5m2 = rlinha5m2.replace(/4444/g,"2222p2222").replace(/444/g,"222p222").replace(/44/g,"22p22").replace(/4/g,"2p2").replace(/2222/g,"1111p1111").replace(/222/g,"111p111").replace(/22/g,"11p11").replace(/2/g,"1p1").replace(/8888/g,"0000p0000").replace(/888/g,"000p000").replace(/88/g,"00p00").replace(/8/g,"0p0")
+
+            var rlinha5p1s0 = 0;
+            var rlinha5p1s1 = 0;
+
+            var rlinha5p2s0 = 0;
+            var rlinha5p2s1 = 0;
+            var rlinha5p2 = 0;
+
+            var rlinha5p3s0 = 0;
+            var rlinha5p3s1 = 0;
+            var rlinha5p3 = 0;
+
+            var rlinha5p4s0 = 0;
+            var rlinha5p4s1 = 0;
+            var rlinha5p4 = 0;
+
+            var rlinhap2 = rlinha5m2.match(/p/g)
+
+            if(rlinha5e4 == 0)
+            {
+                
+            //p0
+                var rlinha5o0 = rlinha5m2.match(/p0/g)
+                if (rlinha5m2.match(/p0/g) != null) {
+                    var rlinha5o0 = rlinha5o0.length
+                }
+                if (rlinha5m2.match(/p0/g) == null) {
+                    var rlinha5o0 = 0
+                }
+            //p00
+                var rlinha5o00 = rlinha5m2.match(/p00/g)
+                if (rlinha5m2.match(/p00/g) != null) {
+                    var rlinha5o00 = rlinha5o00.length
+                }
+                if (rlinha5m2.match(/p00/g) == null) {
+                    var rlinha5o00 = 0
+                }
+            //p000
+                var rlinha5o000 = rlinha5m2.match(/p000/g)
+                if (rlinha5m2.match(/p000/g) != null) {
+                    var rlinha5o000 = rlinha5o000.length
+                }
+                if (rlinha5m2.match(/p000/g) == null) {
+                    var rlinha5o000 = 0
+                }
+            //p0000
+                var rlinha5o0000 = rlinha5m2.match(/p0000/g)
+                if (rlinha5m2.match(/p0000/g) != null) {
+                    var rlinha5o0000 = rlinha5o0000.length
+                }
+                if (rlinha5m2.match(/p0000/g) == null) {
+                    var rlinha5o0000 = 0
+                }
+
+
+            //p1
+                var rlinha5o1 = rlinha5m2.match(/p1/g)
+                if (rlinha5m2.match(/p1/g) != null) {
+                    var rlinha5o1 = rlinha5o1.length
+                }
+                if (rlinha5m2.match(/p1/g) == null) {
+                    var rlinha5o1 = 0
+                }
+            //p11
+                var rlinha5o11 = rlinha5m2.match(/p11/g)
+                if (rlinha5m2.match(/p11/g) != null) {
+                    var rlinha5o11 = rlinha5o11.length
+                }
+                if (rlinha5m2.match(/p11/g) == null) {
+                    var rlinha5o11 = 0
+                }
+            //p111
+                var rlinha5o111 = rlinha5m2.match(/p111/g)
+                if (rlinha5m2.match(/p111/g) != null) {
+                    var rlinha5o111 = rlinha5o111.length
+                }
+                if (rlinha5m2.match(/p111/g) == null) {
+                    var rlinha5o111 = 0
+                }
+            //p1111
+                var rlinha5o1111 = rlinha5m2.match(/p1111/g)
+                if (rlinha5m2.match(/p1111/g) != null) {
+                    var rlinha5o1111 = rlinha5o1111.length
+                }
+                if (rlinha5m2.match(/p1111/g) == null) {
+                    var rlinha5o1111 = 0
+                }
+
+                var rlinha5p1 = rlinha5m2.replace(/ /g,"").length - rlinha5o0 - rlinha5o00 - rlinha5o000 - rlinha5o0000 - rlinha5o1 - rlinha5o11 - rlinha5o111 - rlinha5o1111
+                
+                if((rlinha5m2.match(/p/g)) == null){
+                    var rlinha5p1 = rlinha5p1
+                }
+
+                if((rlinha5m2.match(/p/g)) != null){
+                    var rlinha5p1 = rlinha5p1 - (rlinha5m2.match(/p/g)).length
+                }
+                
+
+                
+
+
+                var rlinha5p2s0 = rlinha5o0 + rlinha5o00 + rlinha5o000 + rlinha5o0000
+                var rlinha5p2s1 = rlinha5o1 + rlinha5o11 + rlinha5o111 + rlinha5o1111
+                var rlinha5p2 = rlinha5p2s0 + rlinha5p2s1
+
+                if(rlinha5m2.search("0") > -1){
+                    if(rlinha5m2.search("1") > -1) {
+                        rlinha5p1s1 = rlinha5m2.match(/1/g).length - rlinha5p2s1 - rlinha5p3s1 - rlinha5p4s1
+                        rlinha5p1s0 = rlinha5m2.match(/0/g).length - rlinha5p2s0 - rlinha5p3s0 - rlinha5p4s0
+                        console.log("a")
+                    }
+                    if(rlinha5m2.search("1") < 0) {
+                        rlinha5p1s0 = rlinha5m2.match(/0/g).length - rlinha5p2s0 - rlinha5p3s0 - rlinha5p4s0
+                        console.log("b")
+                    }
+                }
+                if(rlinha5m2.search("0") < 0){
+                    if(rlinha5m2.search("1") > -1) {                       
+                        rlinha5p1s1 = rlinha5m2.match(/1/g).length - rlinha5p2s1 - rlinha5p3s1 - rlinha5p4s1
+                        console.log("c")
+                    }
+                }
+
+
+                console.log(rlinha5p1)
+
+                console.log("Linha 5 | P1 - #:" + rlinha5p1)
+                console.log("Linha 5 | P1 - 0:" + rlinha5p1s0)
+                console.log("Linha 5 | P1 - 1:" + rlinha5p1s1)
+                console.log("")
+                console.log("Linha 5 | P2 - #:" + rlinha5p2)
+                console.log("Linha 5 | P2 - 0:" + rlinha5p2s0)
+                console.log("Linha 5 | P2 - 1:" + rlinha5p2s1)
+                console.log("")
+                console.log("Linha 5 | P3 - #:" + rlinha5p3)
+                console.log("Linha 5 | P3 - 0:" + rlinha5p3s0)
+                console.log("Linha 5 | P3 - 1:" + rlinha5p3s1)
+                console.log("")
+                console.log("Linha 5 | P4 - #:" + rlinha5p4)
+                console.log("Linha 5 | P4 - 0:" + rlinha5p4s0)
+                console.log("Linha 5 | P4 - 1:" + rlinha5p4s1)
+            }
+
+            if(rlinha5e4 == 1)
+            {
+
+            }
+
+            document.getElementById('analizado').value += "\n" + rlinha5m2;  
+            
+            }
+
+        }
+        function char_count(str, letter) 
+        {
+            var letter_Count = 0;
+            for (var position = 0; position < str.length; position++) 
+            {
+                if (str.charAt(position) == letter) 
+                {
+                    letter_Count += 1;
+                }
+            }
+            return letter_Count;
+        }
+
+        function testAll() {
+
+//METODO 1
+            if(document.getElementById("r1").checked == true) {
+
+            document.getElementById("resultados").style.left="50vw";
+            document.getElementById("resultados").style.position="static";
+
+            var textArea = document.getElementById('analizado');
+            var lines = textArea.value.split('\n');    // lines is an array of strings
+
+            var um = lines[0].replace(/ /g,'')
+            var dois = lines[1].replace(/ /g,'')
+            var tres = lines[2].replace(/ /g,'')
+            var quatro = lines[3].replace(/ /g,'')
+            var cinco = lines[4].replace(/ /g,'')
+
+            var umc1 = char_count(um, 1);
+            var umc0 = char_count(um, 0);
+            console.log("1 | zeros: " + umc0)
+            console.log("1 | uns: " + umc1)
+            document.getElementById('resultados').value = "Default:"
+            document.getElementById('resultados').value += "\n" + String(umc1) + " " + String(umc0)
+
+
+            var doisc1 = char_count(dois, 1);
+            var doisc0 = char_count(dois, 0);
+            console.log("2 | zeros: " + doisc0)
+            console.log("2 | uns: " + doisc1)
+            document.getElementById('resultados').value += "\n" + String(doisc1) + " " + String(doisc0)         
+
+
+            var tresc1 = char_count(tres, 1);
+            var tresc0 = char_count(tres, 0);
+            console.log("3 | zeros: " + tresc0)
+            console.log("3 | uns: " + tresc1)
+            document.getElementById('resultados').value += "\n" + String(tresc1) + " " + String(tresc0)    
+
+            
+            var quatroc1 = char_count(quatro, 1);
+            var quatroc0 = char_count(quatro, 0);  
+            console.log("4 | zeros: " + quatroc0)
+            console.log("4 | uns: " + quatroc1)
+            document.getElementById('resultados').value += "\n" + String(quatroc1) + " " + String(quatroc0)    
+
+
+            var cincoc1 = char_count(cinco, 1);
+            var cincoc0 = char_count(cinco, 0);
+            console.log("5 | zeros: " + cincoc0)
+            console.log("5 | uns: " + cincoc1)
+            document.getElementById('resultados').value += "\n" + String(cincoc1) + " " + String(cincoc0) + "\n"
+
+            var umc1umc0 = umc1 + "" + umc0
+            var doisc1doisc0 = doisc1 + "" + doisc0
+            var tresc1tresc0 = tresc1 + "" + tresc0
+            var quatroc1quatroc0 = quatroc1 + "" + quatroc0
+            var cincoc1cincoc0 = cincoc1 + "" + cincoc0
+
+            var umc1xumc0 = umc1*umc0
+            var doisc1xdoisc0 = doisc1*doisc0
+            var tresc1xtresc0 = tresc1*tresc0
+            var quatroc1xquatroc0 = quatroc1*quatroc0
+            var cincoc1xcincoc0 = cincoc1*cincoc0
+
+            var umc1mumc0 = umc1+umc0
+            var doisc1mdoisc0 = doisc1+doisc0
+            var tresc1mtresc0 = tresc1+tresc0
+            var quatroc1mquatroc0 = quatroc1+quatroc0
+            var cincoc1mcincoc0 = cincoc1+cincoc0
+
+            var umc1meumc0 = umc1-umc0
+            var doisc1medoisc0 = doisc1-doisc0
+            var tresc1metresc0 = tresc1-tresc0
+            var quatroc1mequatroc0 = quatroc1-quatroc0
+            var cincoc1mecincoc0 = cincoc1-cincoc0
+
+            var umc1xpumc0 = umc1*umc0+umc1
+            var doisc1xpdoisc0 = doisc1*doisc0+doisc1
+            var tresc1xptresc0 = tresc1*tresc0+tresc1
+            var quatroc1xpquatroc0 = quatroc1*quatroc0+quatroc1
+            var cincoc1xpcincoc0 = cincoc1*cincoc0+cincoc1
+
+            var umc1xmepumc0 = umc1*umc0-umc1
+            var doisc1xmepdoisc0 = doisc1*doisc0-doisc1
+            var tresc1xmeptresc0 = tresc1*tresc0-tresc1
+            var quatroc1xmepquatroc0 = quatroc1*quatroc0-quatroc1
+            var cincoc1xmepcincoc0 = cincoc1*cincoc0-cincoc1
+
+            var umc1xsumc0 = umc1*umc0+umc0
+            var doisc1xsdoisc0 = doisc1*doisc0+doisc0
+            var tresc1xstresc0 = tresc1*tresc0+tresc0
+            var quatroc1xsquatroc0 = quatroc1*quatroc0+quatroc0
+            var cincoc1xscincoc0 = cincoc1*cincoc0+cincoc0
+
+            var umc1xmesumc0 = umc1*umc0-umc0
+            var doisc1xmesdoisc0 = doisc1*doisc0-doisc0
+            var tresc1xmestresc0 = tresc1*tresc0-tresc0
+            var quatroc1xmesquatroc0 = quatroc1*quatroc0-quatroc0
+            var cincoc1xmescincoc0 = cincoc1*cincoc0-cincoc0
+
+            document.getElementById('resultados').value += "\n\n" + "Juntar:"
+            document.getElementById('resultados').value += "\n" + umc1umc0
+            document.getElementById('resultados').value += "\n" + doisc1doisc0
+            document.getElementById('resultados').value += "\n" + tresc1tresc0
+            document.getElementById('resultados').value += "\n" + quatroc1quatroc0
+            document.getElementById('resultados').value += "\n" + cincoc1cincoc0
+            
+            document.getElementById('resultados').value += "\n\n" + "Multiplação:"
+            document.getElementById('resultados').value += "\n" + umc1xumc0
+            document.getElementById('resultados').value += "\n" + doisc1xdoisc0
+            document.getElementById('resultados').value += "\n" + tresc1xtresc0
+            document.getElementById('resultados').value += "\n" + quatroc1xquatroc0
+            document.getElementById('resultados').value += "\n" + cincoc1xcincoc0
+
+            document.getElementById('resultados').value += "\n\n" + "Soma:"
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += umc1mumc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += doisc1mdoisc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += tresc1mtresc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += quatroc1mquatroc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += cincoc1mcincoc0
+ 
+            document.getElementById('resultados').value += "\n\n" + "Subtração:" 
+            document.getElementById('resultados').value += "\n"     
+            document.getElementById('resultados').value += umc1meumc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += doisc1medoisc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += tresc1metresc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += quatroc1mequatroc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += cincoc1mecincoc0  
+
+            document.getElementById('resultados').value += "\n\n" + "Multiplicação com soma do primeiro:"
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += umc1xpumc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += doisc1xpdoisc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += tresc1xptresc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += quatroc1xpquatroc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += cincoc1xpcincoc0  
+
+            document.getElementById('resultados').value += "\n\n" + "Multiplicação com subtração do primeiro:" 
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += umc1xmepumc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += doisc1xmepdoisc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += tresc1xmeptresc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += quatroc1xmepquatroc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += cincoc1xmepcincoc0
+
+            document.getElementById('resultados').value += "\n\n" + "Multiplicação com soma do segundo:"  
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += umc1xsumc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += doisc1xsdoisc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += tresc1xstresc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += quatroc1xsquatroc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += cincoc1xscincoc0
+
+            document.getElementById('resultados').value += "\n\n" + "Multiplicação com subtração do segundo:"   
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += umc1xmesumc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += doisc1xmesdoisc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += tresc1xmestresc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += quatroc1xmesquatroc0
+            document.getElementById('resultados').value += "\n"
+            document.getElementById('resultados').value += cincoc1xmescincoc0
+
+            }
+//METODO 2
+            if(document.getElementById("r2").checked == true) {
+
+            document.getElementById("resultados").style.left="50vw";
+            document.getElementById("resultados").style.position="static";
+            document.getElementById("resultados").style.height="70vh";
+
+            var textArea = document.getElementById('analizado');
+
+            console.log(rlinha1)
+            console.log(rlinha1p1s1)
+//Default
+            var rlinha1p1s1rlinha1p1s0 = rlinha1p1s1 + " " + rlinha1p1s0
+            var rlinha1p2s1rlinha1p2s0 = rlinha1p2s1 + " " + rlinha1p2s0
+            var rlinha1p3s1rlinha1p3s0 = rlinha1p3s1 + " " + rlinha1p3s0
+            var rlinha1p4s1rlinha1p4s0 = rlinha1p4s1 + " " + rlinha1p4s0
+
+            var rlinha2p1s1rlinha2p1s0 = rlinha2p1s1 + " " + rlinha2p1s0
+            var rlinha2p2s1rlinha2p2s0 = rlinha2p2s1 + " " + rlinha2p2s0
+            var rlinha2p3s1rlinha2p3s0 = rlinha2p3s1 + " " + rlinha2p3s0
+            var rlinha2p4s1rlinha2p4s0 = rlinha2p4s1 + " " + rlinha2p4s0
+
+            var rlinha3p1s1rlinha3p1s0 = rlinha3p1s1 + " " + rlinha3p1s0
+            var rlinha3p2s1rlinha3p2s0 = rlinha3p2s1 + " " + rlinha3p2s0
+            var rlinha3p3s1rlinha3p3s0 = rlinha3p3s1 + " " + rlinha3p3s0
+            var rlinha3p4s1rlinha3p4s0 = rlinha3p4s1 + " " + rlinha3p4s0
+
+            var rlinha4p1s1rlinha4p1s0 = rlinha4p1s1 + " " + rlinha4p1s0
+            var rlinha4p2s1rlinha4p2s0 = rlinha4p2s1 + " " + rlinha4p2s0
+            var rlinha4p3s1rlinha4p3s0 = rlinha4p3s1 + " " + rlinha4p3s0
+            var rlinha4p4s1rlinha4p4s0 = rlinha4p4s1 + " " + rlinha4p4s0
+
+            var rlinha5p1s1rlinha5p1s0 = rlinha5p1s1 + " " + rlinha5p1s0
+            var rlinha5p2s1rlinha5p2s0 = rlinha5p2s1 + " " + rlinha5p2s0
+            var rlinha5p3s1rlinha5p3s0 = rlinha5p3s1 + " " + rlinha5p3s0
+            var rlinha5p4s1rlinha5p4s0 = rlinha5p4s1 + " " + rlinha5p4s0
+
+//Junção
+            var rlinha1p11rlinha1p1s0 = rlinha1p1s1 + "" + rlinha1p1s0
+            var rlinha1p21rlinha1p2s0 = rlinha1p2s1 + "" + rlinha1p2s0
+            var rlinha1p31rlinha1p3s0 = rlinha1p3s1 + "" + rlinha1p3s0
+            var rlinha1p41rlinha1p4s0 = rlinha1p4s1 + "" + rlinha1p4s0
+
+            var rlinha2p11rlinha2p1s0 = rlinha2p1s1 + "" + rlinha2p1s0
+            var rlinha2p21rlinha2p2s0 = rlinha2p2s1 + "" + rlinha2p2s0
+            var rlinha2p31rlinha2p3s0 = rlinha2p3s1 + "" + rlinha2p3s0
+            var rlinha2p41rlinha2p4s0 = rlinha2p4s1 + "" + rlinha2p4s0
+
+            var rlinha3p11rlinha3p1s0 = rlinha3p1s1 + "" + rlinha3p1s0
+            var rlinha3p21rlinha3p2s0 = rlinha3p2s1 + "" + rlinha3p2s0
+            var rlinha3p31rlinha3p3s0 = rlinha3p3s1 + "" + rlinha3p3s0
+            var rlinha3p41rlinha3p4s0 = rlinha3p4s1 + "" + rlinha3p4s0
+
+            var rlinha4p11rlinha4p1s0 = rlinha4p1s1 + "" + rlinha4p1s0
+            var rlinha4p21rlinha4p2s0 = rlinha4p2s1 + "" + rlinha4p2s0
+            var rlinha4p31rlinha4p3s0 = rlinha4p3s1 + "" + rlinha4p3s0
+            var rlinha4p41rlinha4p4s0 = rlinha4p4s1 + "" + rlinha4p4s0
+
+            var rlinha5p11rlinha5p1s0 = rlinha5p1s1 + "" + rlinha5p1s0
+            var rlinha5p21rlinha5p2s0 = rlinha5p2s1 + "" + rlinha5p2s0
+            var rlinha5p31rlinha5p3s0 = rlinha5p3s1 + "" + rlinha5p3s0
+            var rlinha5p41rlinha5p4s0 = rlinha5p4s1 + "" + rlinha5p4s0
+
+//Multiplição
+            var rlinha1p1m1rlinha1p1s0 = rlinha1p1s1 * rlinha1p1s0
+            var rlinha1p2m1rlinha1p2s0 = rlinha1p2s1 * rlinha1p2s0
+            var rlinha1p3m1rlinha1p3s0 = rlinha1p3s1 * rlinha1p3s0
+            var rlinha1p4m1rlinha1p4s0 = rlinha1p4s1 * rlinha1p4s0
+
+            var rlinha2p1m1rlinha2p1s0 = rlinha2p1s1 * rlinha2p1s0
+            var rlinha2p2m1rlinha2p2s0 = rlinha2p2s1 * rlinha2p2s0
+            var rlinha2p3m1rlinha2p3s0 = rlinha2p3s1 * rlinha2p3s0
+            var rlinha2p4m1rlinha2p4s0 = rlinha2p4s1 * rlinha2p4s0
+
+            var rlinha3p1m1rlinha3p1s0 = rlinha3p1s1 * rlinha3p1s0
+            var rlinha3p2m1rlinha3p2s0 = rlinha3p2s1 * rlinha3p2s0
+            var rlinha3p3m1rlinha3p3s0 = rlinha3p3s1 * rlinha3p3s0
+            var rlinha3p4m1rlinha3p4s0 = rlinha3p4s1 * rlinha3p4s0
+
+            var rlinha4p1m1rlinha4p1s0 = rlinha4p1s1 * rlinha4p1s0
+            var rlinha4p2m1rlinha4p2s0 = rlinha4p2s1 * rlinha4p2s0
+            var rlinha4p3m1rlinha4p3s0 = rlinha4p3s1 * rlinha4p3s0
+            var rlinha4p4m1rlinha4p4s0 = rlinha4p4s1 * rlinha4p4s0
+
+            var rlinha5p1m1rlinha5p1s0 = rlinha5p1s1 * rlinha5p1s0
+            var rlinha5p2m1rlinha5p2s0 = rlinha5p2s1 * rlinha5p2s0
+            var rlinha5p3m1rlinha5p3s0 = rlinha5p3s1 * rlinha5p3s0
+            var rlinha5p4m1rlinha5p4s0 = rlinha5p4s1 * rlinha5p4s0
+
+//Subtração
+            var rlinha1p1su1rlinha1p1s0 = rlinha1p1s1 - rlinha1p1s0
+            var rlinha1p2su1rlinha1p2s0 = rlinha1p2s1 - rlinha1p2s0
+            var rlinha1p3su1rlinha1p3s0 = rlinha1p3s1 - rlinha1p3s0
+            var rlinha1p4su1rlinha1p4s0 = rlinha1p4s1 - rlinha1p4s0
+
+            var rlinha2p1su1rlinha2p1s0 = rlinha2p1s1 - rlinha2p1s0
+            var rlinha2p2su1rlinha2p2s0 = rlinha2p2s1 - rlinha2p2s0
+            var rlinha2p3su1rlinha2p3s0 = rlinha2p3s1 - rlinha2p3s0
+            var rlinha2p4su1rlinha2p4s0 = rlinha2p4s1 - rlinha2p4s0
+
+            var rlinha3p1su1rlinha3p1s0 = rlinha3p1s1 - rlinha3p1s0
+            var rlinha3p2su1rlinha3p2s0 = rlinha3p2s1 - rlinha3p2s0
+            var rlinha3p3su1rlinha3p3s0 = rlinha3p3s1 - rlinha3p3s0
+            var rlinha3p4su1rlinha3p4s0 = rlinha3p4s1 - rlinha3p4s0
+
+            var rlinha4p1su1rlinha4p1s0 = rlinha4p1s1 - rlinha4p1s0
+            var rlinha4p2su1rlinha4p2s0 = rlinha4p2s1 - rlinha4p2s0
+            var rlinha4p3su1rlinha4p3s0 = rlinha4p3s1 - rlinha4p3s0
+            var rlinha4p4su1rlinha4p4s0 = rlinha4p4s1 - rlinha4p4s0
+
+            var rlinha5p1su1rlinha5p1s0 = rlinha5p1s1 - rlinha5p1s0
+            var rlinha5p2su1rlinha5p2s0 = rlinha5p2s1 - rlinha5p2s0
+            var rlinha5p3su1rlinha5p3s0 = rlinha5p3s1 - rlinha5p3s0
+            var rlinha5p4su1rlinha5p4s0 = rlinha5p4s1 - rlinha5p4s0
+
+//Multiplição com soma do primeiro
+            var rlinha1p1ms1rlinha1p1s0 = rlinha1p1s1 * rlinha1p1s0 + rlinha1p1s1
+            var rlinha1p2ms1rlinha1p2s0 = rlinha1p2s1 * rlinha1p2s0 + rlinha1p2s1
+            var rlinha1p3ms1rlinha1p3s0 = rlinha1p3s1 * rlinha1p3s0 + rlinha1p3s1
+            var rlinha1p4ms1rlinha1p4s0 = rlinha1p4s1 * rlinha1p4s0 + rlinha1p4s1
+
+            var rlinha2p1ms1rlinha2p1s0 = rlinha2p1s1 * rlinha2p1s0 + rlinha2p1s1
+            var rlinha2p2ms1rlinha2p2s0 = rlinha2p2s1 * rlinha2p2s0 + rlinha2p2s1
+            var rlinha2p3ms1rlinha2p3s0 = rlinha2p3s1 * rlinha2p3s0 + rlinha2p3s1
+            var rlinha2p4ms1rlinha2p4s0 = rlinha2p4s1 * rlinha2p4s0 + rlinha2p4s1
+
+            var rlinha3p1ms1rlinha3p1s0 = rlinha3p1s1 * rlinha3p1s0 + rlinha3p1s1
+            var rlinha3p2ms1rlinha3p2s0 = rlinha3p2s1 * rlinha3p2s0 + rlinha3p2s1
+            var rlinha3p3ms1rlinha3p3s0 = rlinha3p3s1 * rlinha3p3s0 + rlinha3p3s1
+            var rlinha3p4ms1rlinha3p4s0 = rlinha3p4s1 * rlinha3p4s0 + rlinha3p4s1
+
+            var rlinha4p1ms1rlinha4p1s0 = rlinha4p1s1 * rlinha4p1s0 + rlinha4p1s1
+            var rlinha4p2ms1rlinha4p2s0 = rlinha4p2s1 * rlinha4p2s0 + rlinha4p2s1
+            var rlinha4p3ms1rlinha4p3s0 = rlinha4p3s1 * rlinha4p3s0 + rlinha4p3s1
+            var rlinha4p4ms1rlinha4p4s0 = rlinha4p4s1 * rlinha4p4s0 + rlinha4p4s1
+
+            var rlinha5p1ms1rlinha5p1s0 = rlinha5p1s1 * rlinha5p1s0 + rlinha5p1s1
+            var rlinha5p2ms1rlinha5p2s0 = rlinha5p2s1 * rlinha5p2s0 + rlinha5p2s1
+            var rlinha5p3ms1rlinha5p3s0 = rlinha5p3s1 * rlinha5p3s0 + rlinha5p3s1
+            var rlinha5p4ms1rlinha5p4s0 = rlinha5p4s1 * rlinha5p4s0 + rlinha5p4s1
+
+//Multiplição com subtração do primeiro
+            var rlinha1p1msu1rlinha1p1s0 = rlinha1p1s1 * rlinha1p1s0 - rlinha1p1s1
+            var rlinha1p2msu1rlinha1p2s0 = rlinha1p2s1 * rlinha1p2s0 - rlinha1p2s1
+            var rlinha1p3msu1rlinha1p3s0 = rlinha1p3s1 * rlinha1p3s0 - rlinha1p3s1
+            var rlinha1p4msu1rlinha1p4s0 = rlinha1p4s1 * rlinha1p4s0 - rlinha1p4s1
+
+            var rlinha2p1msu1rlinha2p1s0 = rlinha2p1s1 * rlinha2p1s0 - rlinha2p1s1
+            var rlinha2p2msu1rlinha2p2s0 = rlinha2p2s1 * rlinha2p2s0 - rlinha2p2s1
+            var rlinha2p3msu1rlinha2p3s0 = rlinha2p3s1 * rlinha2p3s0 - rlinha2p3s1
+            var rlinha2p4msu1rlinha2p4s0 = rlinha2p4s1 * rlinha2p4s0 - rlinha2p4s1
+
+            var rlinha3p1msu1rlinha3p1s0 = rlinha3p1s1 * rlinha3p1s0 - rlinha3p1s1
+            var rlinha3p2msu1rlinha3p2s0 = rlinha3p2s1 * rlinha3p2s0 - rlinha3p2s1
+            var rlinha3p3msu1rlinha3p3s0 = rlinha3p3s1 * rlinha3p3s0 - rlinha3p3s1
+            var rlinha3p4msu1rlinha3p4s0 = rlinha3p4s1 * rlinha3p4s0 - rlinha3p4s1
+
+            var rlinha4p1msu1rlinha4p1s0 = rlinha4p1s1 * rlinha4p1s0 - rlinha4p1s1
+            var rlinha4p2msu1rlinha4p2s0 = rlinha4p2s1 * rlinha4p2s0 - rlinha4p2s1
+            var rlinha4p3msu1rlinha4p3s0 = rlinha4p3s1 * rlinha4p3s0 - rlinha4p3s1
+            var rlinha4p4msu1rlinha4p4s0 = rlinha4p4s1 * rlinha4p4s0 - rlinha4p4s1
+
+            var rlinha5p1msu1rlinha5p1s0 = rlinha5p1s1 * rlinha5p1s0 - rlinha5p1s1
+            var rlinha5p2msu1rlinha5p2s0 = rlinha5p2s1 * rlinha5p2s0 - rlinha5p2s1
+            var rlinha5p3msu1rlinha5p3s0 = rlinha5p3s1 * rlinha5p3s0 - rlinha5p3s1
+            var rlinha5p4msu1rlinha5p4s0 = rlinha5p4s1 * rlinha5p4s0 - rlinha5p4s1      
+
+//Multiplição com soma do segundo
+            var rlinha1p1mss1rlinha1p1s0 = rlinha1p1s1 * rlinha1p1s0 + rlinha1p1s0
+            var rlinha1p2mss1rlinha1p2s0 = rlinha1p2s1 * rlinha1p2s0 + rlinha1p2s0
+            var rlinha1p3mss1rlinha1p3s0 = rlinha1p3s1 * rlinha1p3s0 + rlinha1p3s0
+            var rlinha1p4mss1rlinha1p4s0 = rlinha1p4s1 * rlinha1p4s0 + rlinha1p4s0
+
+            var rlinha2p1mss1rlinha2p1s0 = rlinha2p1s1 * rlinha2p1s0 + rlinha2p1s0
+            var rlinha2p2mss1rlinha2p2s0 = rlinha2p2s1 * rlinha2p2s0 + rlinha2p2s0
+            var rlinha2p3mss1rlinha2p3s0 = rlinha2p3s1 * rlinha2p3s0 + rlinha2p3s0
+            var rlinha2p4mss1rlinha2p4s0 = rlinha2p4s1 * rlinha2p4s0 + rlinha2p4s0
+
+            var rlinha3p1mss1rlinha3p1s0 = rlinha3p1s1 * rlinha3p1s0 + rlinha3p1s0
+            var rlinha3p2mss1rlinha3p2s0 = rlinha3p2s1 * rlinha3p2s0 + rlinha3p2s0
+            var rlinha3p3mss1rlinha3p3s0 = rlinha3p3s1 * rlinha3p3s0 + rlinha3p3s0
+            var rlinha3p4mss1rlinha3p4s0 = rlinha3p4s1 * rlinha3p4s0 + rlinha3p4s0
+
+            var rlinha4p1mss1rlinha4p1s0 = rlinha4p1s1 * rlinha4p1s0 + rlinha4p1s0
+            var rlinha4p2mss1rlinha4p2s0 = rlinha4p2s1 * rlinha4p2s0 + rlinha4p2s0
+            var rlinha4p3mss1rlinha4p3s0 = rlinha4p3s1 * rlinha4p3s0 + rlinha4p3s0
+            var rlinha4p4mss1rlinha4p4s0 = rlinha4p4s1 * rlinha4p4s0 + rlinha4p4s0
+
+            var rlinha5p1mss1rlinha5p1s0 = rlinha5p1s1 * rlinha5p1s0 + rlinha5p1s0
+            var rlinha5p2mss1rlinha5p2s0 = rlinha5p2s1 * rlinha5p2s0 + rlinha5p2s0
+            var rlinha5p3mss1rlinha5p3s0 = rlinha5p3s1 * rlinha5p3s0 + rlinha5p3s0
+            var rlinha5p4mss1rlinha5p4s0 = rlinha5p4s1 * rlinha5p4s0 + rlinha5p4s0
+
+//Multiplição com subtração do segundo
+            var rlinha1p1mssu1rlinha1p1s0 = rlinha1p1s1 * rlinha1p1s0 - rlinha1p1s0
+            var rlinha1p2mssu1rlinha1p2s0 = rlinha1p2s1 * rlinha1p2s0 - rlinha1p2s0
+            var rlinha1p3mssu1rlinha1p3s0 = rlinha1p3s1 * rlinha1p3s0 - rlinha1p3s0
+            var rlinha1p4mssu1rlinha1p4s0 = rlinha1p4s1 * rlinha1p4s0 - rlinha1p4s0
+
+            var rlinha2p1mssu1rlinha2p1s0 = rlinha2p1s1 * rlinha2p1s0 - rlinha2p1s0
+            var rlinha2p2mssu1rlinha2p2s0 = rlinha2p2s1 * rlinha2p2s0 - rlinha2p2s0
+            var rlinha2p3mssu1rlinha2p3s0 = rlinha2p3s1 * rlinha2p3s0 - rlinha2p3s0
+            var rlinha2p4mssu1rlinha2p4s0 = rlinha2p4s1 * rlinha2p4s0 - rlinha2p4s0
+
+            var rlinha3p1mssu1rlinha3p1s0 = rlinha3p1s1 * rlinha3p1s0 - rlinha3p1s0
+            var rlinha3p2mssu1rlinha3p2s0 = rlinha3p2s1 * rlinha3p2s0 - rlinha3p2s0
+            var rlinha3p3mssu1rlinha3p3s0 = rlinha3p3s1 * rlinha3p3s0 - rlinha3p3s0
+            var rlinha3p4mssu1rlinha3p4s0 = rlinha3p4s1 * rlinha3p4s0 - rlinha3p4s0
+
+            var rlinha4p1mssu1rlinha4p1s0 = rlinha4p1s1 * rlinha4p1s0 - rlinha4p1s0
+            var rlinha4p2mssu1rlinha4p2s0 = rlinha4p2s1 * rlinha4p2s0 - rlinha4p2s0
+            var rlinha4p3mssu1rlinha4p3s0 = rlinha4p3s1 * rlinha4p3s0 - rlinha4p3s0
+            var rlinha4p4mssu1rlinha4p4s0 = rlinha4p4s1 * rlinha4p4s0 - rlinha4p4s0
+
+            var rlinha5p1mssu1rlinha5p1s0 = rlinha5p1s1 * rlinha5p1s0 - rlinha5p1s0
+            var rlinha5p2mssu1rlinha5p2s0 = rlinha5p2s1 * rlinha5p2s0 - rlinha5p2s0
+            var rlinha5p3mssu1rlinha5p3s0 = rlinha5p3s1 * rlinha5p3s0 - rlinha5p3s0
+            var rlinha5p4mssu1rlinha5p4s0 = rlinha5p4s1 * rlinha5p4s0 - rlinha5p4s0      
+
+            document.getElementById('resultados').value += "\n\n" + "Default:"
+            document.getElementById('resultados').value += "\n\n" + "L1:"
+            document.getElementById('resultados').value += "\n" + rlinha1p1s1rlinha1p1s0
+            document.getElementById('resultados').value += "\n" + rlinha1p2s1rlinha1p2s0
+            document.getElementById('resultados').value += "\n" + rlinha1p3s1rlinha1p3s0
+            document.getElementById('resultados').value += "\n" + rlinha1p4s1rlinha1p4s0
+            document.getElementById('resultados').value += "\n\n" + "L2:"
+            document.getElementById('resultados').value += "\n" + rlinha2p1s1rlinha2p1s0
+            document.getElementById('resultados').value += "\n" + rlinha2p2s1rlinha2p2s0
+            document.getElementById('resultados').value += "\n" + rlinha2p3s1rlinha2p3s0
+            document.getElementById('resultados').value += "\n" + rlinha2p4s1rlinha2p4s0
+            document.getElementById('resultados').value += "\n\n" + "L3:"
+            document.getElementById('resultados').value += "\n" + rlinha3p1s1rlinha3p1s0
+            document.getElementById('resultados').value += "\n" + rlinha3p2s1rlinha3p2s0
+            document.getElementById('resultados').value += "\n" + rlinha3p3s1rlinha3p3s0
+            document.getElementById('resultados').value += "\n" + rlinha3p4s1rlinha3p4s0
+            document.getElementById('resultados').value += "\n\n" + "L4:"
+            document.getElementById('resultados').value += "\n" + rlinha4p1s1rlinha4p1s0
+            document.getElementById('resultados').value += "\n" + rlinha4p2s1rlinha4p2s0
+            document.getElementById('resultados').value += "\n" + rlinha4p3s1rlinha4p3s0
+            document.getElementById('resultados').value += "\n" + rlinha4p4s1rlinha4p4s0
+            document.getElementById('resultados').value += "\n\n" + "L5:"
+            document.getElementById('resultados').value += "\n" + rlinha5p1s1rlinha5p1s0
+            document.getElementById('resultados').value += "\n" + rlinha5p2s1rlinha5p2s0
+            document.getElementById('resultados').value += "\n" + rlinha5p3s1rlinha5p3s0
+            document.getElementById('resultados').value += "\n" + rlinha5p4s1rlinha5p4s0
+
+            document.getElementById('resultados').value += "\n\n" + "Juntar:"
+            document.getElementById('resultados').value += "\n\n" + "L1:"
+            document.getElementById('resultados').value += "\n" + rlinha1p11rlinha1p1s0
+            document.getElementById('resultados').value += "\n" + rlinha1p21rlinha1p2s0
+            document.getElementById('resultados').value += "\n" + rlinha1p31rlinha1p3s0
+            document.getElementById('resultados').value += "\n" + rlinha1p41rlinha1p4s0
+            document.getElementById('resultados').value += "\n\n" + "L2:"
+            document.getElementById('resultados').value += "\n" + rlinha2p11rlinha2p1s0
+            document.getElementById('resultados').value += "\n" + rlinha2p21rlinha2p2s0
+            document.getElementById('resultados').value += "\n" + rlinha2p31rlinha2p3s0
+            document.getElementById('resultados').value += "\n" + rlinha2p41rlinha2p4s0
+            document.getElementById('resultados').value += "\n\n" + "L3:"
+            document.getElementById('resultados').value += "\n" + rlinha3p11rlinha3p1s0
+            document.getElementById('resultados').value += "\n" + rlinha3p21rlinha3p2s0
+            document.getElementById('resultados').value += "\n" + rlinha3p31rlinha3p3s0
+            document.getElementById('resultados').value += "\n" + rlinha3p41rlinha3p4s0
+            document.getElementById('resultados').value += "\n\n" + "L4:"
+            document.getElementById('resultados').value += "\n" + rlinha4p11rlinha4p1s0
+            document.getElementById('resultados').value += "\n" + rlinha4p21rlinha4p2s0
+            document.getElementById('resultados').value += "\n" + rlinha4p31rlinha4p3s0
+            document.getElementById('resultados').value += "\n" + rlinha4p41rlinha4p4s0
+            document.getElementById('resultados').value += "\n\n" + "L5:"
+            document.getElementById('resultados').value += "\n" + rlinha5p11rlinha5p1s0
+            document.getElementById('resultados').value += "\n" + rlinha5p21rlinha5p2s0
+            document.getElementById('resultados').value += "\n" + rlinha5p31rlinha5p3s0
+            document.getElementById('resultados').value += "\n" + rlinha5p41rlinha5p4s0
+            
+            document.getElementById('resultados').value += "\n\n" + "Multiplação:"
+            document.getElementById('resultados').value += "\n\n" + "L1:"
+            document.getElementById('resultados').value += "\n" + rlinha1p1m1rlinha1p1s0
+            document.getElementById('resultados').value += "\n" + rlinha1p2m1rlinha1p2s0
+            document.getElementById('resultados').value += "\n" + rlinha1p3m1rlinha1p3s0
+            document.getElementById('resultados').value += "\n" + rlinha1p4m1rlinha1p4s0
+            document.getElementById('resultados').value += "\n\n" + "L2:"
+            document.getElementById('resultados').value += "\n" + rlinha2p1m1rlinha2p1s0
+            document.getElementById('resultados').value += "\n" + rlinha2p2m1rlinha2p2s0
+            document.getElementById('resultados').value += "\n" + rlinha2p3m1rlinha2p3s0
+            document.getElementById('resultados').value += "\n" + rlinha2p4m1rlinha2p4s0
+            document.getElementById('resultados').value += "\n\n" + "L3:"
+            document.getElementById('resultados').value += "\n" + rlinha3p1m1rlinha3p1s0
+            document.getElementById('resultados').value += "\n" + rlinha3p2m1rlinha3p2s0
+            document.getElementById('resultados').value += "\n" + rlinha3p3m1rlinha3p3s0
+            document.getElementById('resultados').value += "\n" + rlinha3p4m1rlinha3p4s0
+            document.getElementById('resultados').value += "\n\n" + "L4:"
+            document.getElementById('resultados').value += "\n" + rlinha4p1m1rlinha4p1s0
+            document.getElementById('resultados').value += "\n" + rlinha4p2m1rlinha4p2s0
+            document.getElementById('resultados').value += "\n" + rlinha4p3m1rlinha4p3s0
+            document.getElementById('resultados').value += "\n" + rlinha4p4m1rlinha4p4s0
+            document.getElementById('resultados').value += "\n\n" + "L5:"
+            document.getElementById('resultados').value += "\n" + rlinha5p1m1rlinha5p1s0
+            document.getElementById('resultados').value += "\n" + rlinha5p2m1rlinha5p2s0
+            document.getElementById('resultados').value += "\n" + rlinha5p3m1rlinha5p3s0
+            document.getElementById('resultados').value += "\n" + rlinha5p4m1rlinha5p4s0
+
+            document.getElementById('resultados').value += "\n\n" + "Soma:"
+            document.getElementById('resultados').value += "\n\n" + "L1:"
+            document.getElementById('resultados').value += "\n" + rlinha1p1
+            document.getElementById('resultados').value += "\n" + rlinha1p2
+            document.getElementById('resultados').value += "\n" + rlinha1p3
+            document.getElementById('resultados').value += "\n" + rlinha1p4
+            document.getElementById('resultados').value += "\n\n" + "L2:"
+            document.getElementById('resultados').value += "\n" + rlinha2p1
+            document.getElementById('resultados').value += "\n" + rlinha2p2
+            document.getElementById('resultados').value += "\n" + rlinha2p3
+            document.getElementById('resultados').value += "\n" + rlinha2p4
+            document.getElementById('resultados').value += "\n\n" + "L3:"
+            document.getElementById('resultados').value += "\n" + rlinha3p1
+            document.getElementById('resultados').value += "\n" + rlinha3p2
+            document.getElementById('resultados').value += "\n" + rlinha3p3
+            document.getElementById('resultados').value += "\n" + rlinha3p4
+            document.getElementById('resultados').value += "\n\n" + "L4:"
+            document.getElementById('resultados').value += "\n" + rlinha4p1
+            document.getElementById('resultados').value += "\n" + rlinha4p2
+            document.getElementById('resultados').value += "\n" + rlinha4p3
+            document.getElementById('resultados').value += "\n" + rlinha4p4
+            document.getElementById('resultados').value += "\n\n" + "L5:"
+            document.getElementById('resultados').value += "\n" + rlinha5p1
+            document.getElementById('resultados').value += "\n" + rlinha5p2
+            document.getElementById('resultados').value += "\n" + rlinha5p3
+            document.getElementById('resultados').value += "\n" + rlinha5p4
+ 
+            document.getElementById('resultados').value += "\n\n" + "Subtração:" 
+            document.getElementById('resultados').value += "\n\n" + "L1:"
+            document.getElementById('resultados').value += "\n" + rlinha1p1su1rlinha1p1s0
+            document.getElementById('resultados').value += "\n" + rlinha1p2su1rlinha1p2s0
+            document.getElementById('resultados').value += "\n" + rlinha1p3su1rlinha1p3s0
+            document.getElementById('resultados').value += "\n" + rlinha1p4su1rlinha1p4s0
+            document.getElementById('resultados').value += "\n\n" + "L2:"
+            document.getElementById('resultados').value += "\n" + rlinha2p1su1rlinha2p1s0
+            document.getElementById('resultados').value += "\n" + rlinha2p2su1rlinha2p2s0
+            document.getElementById('resultados').value += "\n" + rlinha2p3su1rlinha2p3s0
+            document.getElementById('resultados').value += "\n" + rlinha2p4su1rlinha2p4s0
+            document.getElementById('resultados').value += "\n\n" + "L3:"
+            document.getElementById('resultados').value += "\n" + rlinha3p1su1rlinha3p1s0
+            document.getElementById('resultados').value += "\n" + rlinha3p2su1rlinha3p2s0
+            document.getElementById('resultados').value += "\n" + rlinha3p3su1rlinha3p3s0
+            document.getElementById('resultados').value += "\n" + rlinha3p4su1rlinha3p4s0
+            document.getElementById('resultados').value += "\n\n" + "L4:"
+            document.getElementById('resultados').value += "\n" + rlinha4p1su1rlinha4p1s0
+            document.getElementById('resultados').value += "\n" + rlinha4p2su1rlinha4p2s0
+            document.getElementById('resultados').value += "\n" + rlinha4p3su1rlinha4p3s0
+            document.getElementById('resultados').value += "\n" + rlinha4p4su1rlinha4p4s0
+            document.getElementById('resultados').value += "\n\n" + "L5:"
+            document.getElementById('resultados').value += "\n" + rlinha5p1su1rlinha5p1s0
+            document.getElementById('resultados').value += "\n" + rlinha5p2su1rlinha5p2s0
+            document.getElementById('resultados').value += "\n" + rlinha5p3su1rlinha5p3s0
+            document.getElementById('resultados').value += "\n" + rlinha5p4su1rlinha5p4s0
+
+            document.getElementById('resultados').value += "\n\n" + "Multiplicação com soma do primeiro:"
+            document.getElementById('resultados').value += "\n\n" + "L1:"
+            document.getElementById('resultados').value += "\n" + rlinha1p1ms1rlinha1p1s0
+            document.getElementById('resultados').value += "\n" + rlinha1p2ms1rlinha1p2s0
+            document.getElementById('resultados').value += "\n" + rlinha1p3ms1rlinha1p3s0
+            document.getElementById('resultados').value += "\n" + rlinha1p4ms1rlinha1p4s0
+            document.getElementById('resultados').value += "\n\n" + "L2:"
+            document.getElementById('resultados').value += "\n" + rlinha2p1ms1rlinha2p1s0
+            document.getElementById('resultados').value += "\n" + rlinha2p2ms1rlinha2p2s0
+            document.getElementById('resultados').value += "\n" + rlinha2p3ms1rlinha2p3s0
+            document.getElementById('resultados').value += "\n" + rlinha2p4ms1rlinha2p4s0
+            document.getElementById('resultados').value += "\n\n" + "L3:"
+            document.getElementById('resultados').value += "\n" + rlinha3p1ms1rlinha3p1s0
+            document.getElementById('resultados').value += "\n" + rlinha3p2ms1rlinha3p2s0
+            document.getElementById('resultados').value += "\n" + rlinha3p3ms1rlinha3p3s0
+            document.getElementById('resultados').value += "\n" + rlinha3p4ms1rlinha3p4s0
+            document.getElementById('resultados').value += "\n\n" + "L4:"
+            document.getElementById('resultados').value += "\n" + rlinha4p1ms1rlinha4p1s0
+            document.getElementById('resultados').value += "\n" + rlinha4p2ms1rlinha4p2s0
+            document.getElementById('resultados').value += "\n" + rlinha4p3ms1rlinha4p3s0
+            document.getElementById('resultados').value += "\n" + rlinha4p4ms1rlinha4p4s0
+            document.getElementById('resultados').value += "\n\n" + "L5:"
+            document.getElementById('resultados').value += "\n" + rlinha5p1ms1rlinha5p1s0
+            document.getElementById('resultados').value += "\n" + rlinha5p2ms1rlinha5p2s0
+            document.getElementById('resultados').value += "\n" + rlinha5p3ms1rlinha5p3s0
+            document.getElementById('resultados').value += "\n" + rlinha5p4ms1rlinha5p4s0
+
+            document.getElementById('resultados').value += "\n\n" + "Multiplicação com subtração do primeiro:" 
+            document.getElementById('resultados').value += "\n\n" + "L1:"
+            document.getElementById('resultados').value += "\n" + rlinha1p1msu1rlinha1p1s0
+            document.getElementById('resultados').value += "\n" + rlinha1p2msu1rlinha1p2s0
+            document.getElementById('resultados').value += "\n" + rlinha1p3msu1rlinha1p3s0
+            document.getElementById('resultados').value += "\n" + rlinha1p4msu1rlinha1p4s0
+            document.getElementById('resultados').value += "\n\n" + "L2:"
+            document.getElementById('resultados').value += "\n" + rlinha2p1msu1rlinha2p1s0
+            document.getElementById('resultados').value += "\n" + rlinha2p2msu1rlinha2p2s0
+            document.getElementById('resultados').value += "\n" + rlinha2p3msu1rlinha2p3s0
+            document.getElementById('resultados').value += "\n" + rlinha2p4msu1rlinha2p4s0
+            document.getElementById('resultados').value += "\n\n" + "L3:"
+            document.getElementById('resultados').value += "\n" + rlinha3p1msu1rlinha3p1s0
+            document.getElementById('resultados').value += "\n" + rlinha3p2msu1rlinha3p2s0
+            document.getElementById('resultados').value += "\n" + rlinha3p3msu1rlinha3p3s0
+            document.getElementById('resultados').value += "\n" + rlinha3p4msu1rlinha3p4s0
+            document.getElementById('resultados').value += "\n\n" + "L4:"
+            document.getElementById('resultados').value += "\n" + rlinha4p1msu1rlinha4p1s0
+            document.getElementById('resultados').value += "\n" + rlinha4p2msu1rlinha4p2s0
+            document.getElementById('resultados').value += "\n" + rlinha4p3msu1rlinha4p3s0
+            document.getElementById('resultados').value += "\n" + rlinha4p4msu1rlinha4p4s0
+            document.getElementById('resultados').value += "\n\n" + "L5:"
+            document.getElementById('resultados').value += "\n" + rlinha5p1msu1rlinha5p1s0
+            document.getElementById('resultados').value += "\n" + rlinha5p2msu1rlinha5p2s0
+            document.getElementById('resultados').value += "\n" + rlinha5p3msu1rlinha5p3s0
+            document.getElementById('resultados').value += "\n" + rlinha5p4msu1rlinha5p4s0
+
+            document.getElementById('resultados').value += "\n\n" + "Multiplicação com soma do segundo:"  
+            document.getElementById('resultados').value += "\n\n" + "L1:"
+            document.getElementById('resultados').value += "\n" + rlinha1p1mss1rlinha1p1s0
+            document.getElementById('resultados').value += "\n" + rlinha1p2mss1rlinha1p2s0
+            document.getElementById('resultados').value += "\n" + rlinha1p3mss1rlinha1p3s0
+            document.getElementById('resultados').value += "\n" + rlinha1p4mss1rlinha1p4s0
+            document.getElementById('resultados').value += "\n\n" + "L2:"
+            document.getElementById('resultados').value += "\n" + rlinha2p1mss1rlinha2p1s0
+            document.getElementById('resultados').value += "\n" + rlinha2p2mss1rlinha2p2s0
+            document.getElementById('resultados').value += "\n" + rlinha2p3mss1rlinha2p3s0
+            document.getElementById('resultados').value += "\n" + rlinha2p4mss1rlinha2p4s0
+            document.getElementById('resultados').value += "\n\n" + "L3:"
+            document.getElementById('resultados').value += "\n" + rlinha3p1mss1rlinha3p1s0
+            document.getElementById('resultados').value += "\n" + rlinha3p2mss1rlinha3p2s0
+            document.getElementById('resultados').value += "\n" + rlinha3p3mss1rlinha3p3s0
+            document.getElementById('resultados').value += "\n" + rlinha3p4mss1rlinha3p4s0
+            document.getElementById('resultados').value += "\n\n" + "L4:"
+            document.getElementById('resultados').value += "\n" + rlinha4p1mss1rlinha4p1s0
+            document.getElementById('resultados').value += "\n" + rlinha4p2mss1rlinha4p2s0
+            document.getElementById('resultados').value += "\n" + rlinha4p3mss1rlinha4p3s0
+            document.getElementById('resultados').value += "\n" + rlinha4p4mss1rlinha4p4s0
+            document.getElementById('resultados').value += "\n\n" + "L5:"
+            document.getElementById('resultados').value += "\n" + rlinha5p1mss1rlinha5p1s0
+            document.getElementById('resultados').value += "\n" + rlinha5p2mss1rlinha5p2s0
+            document.getElementById('resultados').value += "\n" + rlinha5p3mss1rlinha5p3s0
+            document.getElementById('resultados').value += "\n" + rlinha5p4mss1rlinha5p4s0
+
+            document.getElementById('resultados').value += "\n\n" + "Multiplicação com subtração do segundo:"   
+            document.getElementById('resultados').value += "\n\n" + "L1:"
+            document.getElementById('resultados').value += "\n" + rlinha1p1mssu1rlinha1p1s0
+            document.getElementById('resultados').value += "\n" + rlinha1p2mssu1rlinha1p2s0
+            document.getElementById('resultados').value += "\n" + rlinha1p3mssu1rlinha1p3s0
+            document.getElementById('resultados').value += "\n" + rlinha1p4mssu1rlinha1p4s0
+            document.getElementById('resultados').value += "\n\n" + "L2:"
+            document.getElementById('resultados').value += "\n" + rlinha2p1mssu1rlinha2p1s0
+            document.getElementById('resultados').value += "\n" + rlinha2p2mssu1rlinha2p2s0
+            document.getElementById('resultados').value += "\n" + rlinha2p3mssu1rlinha2p3s0
+            document.getElementById('resultados').value += "\n" + rlinha2p4mssu1rlinha2p4s0
+            document.getElementById('resultados').value += "\n\n" + "L3:"
+            document.getElementById('resultados').value += "\n" + rlinha3p1mssu1rlinha3p1s0
+            document.getElementById('resultados').value += "\n" + rlinha3p2mssu1rlinha3p2s0
+            document.getElementById('resultados').value += "\n" + rlinha3p3mssu1rlinha3p3s0
+            document.getElementById('resultados').value += "\n" + rlinha3p4mssu1rlinha3p4s0
+            document.getElementById('resultados').value += "\n\n" + "L4:"
+            document.getElementById('resultados').value += "\n" + rlinha4p1mssu1rlinha4p1s0
+            document.getElementById('resultados').value += "\n" + rlinha4p2mssu1rlinha4p2s0
+            document.getElementById('resultados').value += "\n" + rlinha4p3mssu1rlinha4p3s0
+            document.getElementById('resultados').value += "\n" + rlinha4p4mssu1rlinha4p4s0
+            document.getElementById('resultados').value += "\n\n" + "L5:"
+            document.getElementById('resultados').value += "\n" + rlinha5p1mssu1rlinha5p1s0
+            document.getElementById('resultados').value += "\n" + rlinha5p2mssu1rlinha5p2s0
+            document.getElementById('resultados').value += "\n" + rlinha5p3mssu1rlinha5p3s0
+            document.getElementById('resultados').value += "\n" + rlinha5p4mssu1rlinha5p4s0
+
+            }
+
+            }
+    </script>
+</body>
+</html>

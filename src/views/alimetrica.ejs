@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia Alimetrica</title>
+    <link rel="shortcut icon" href="./images/alimetrica.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/tools.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <%- include ('./partials/header') %>
+
+        <!-- TITLE -->
+        <h1><strong>Decodificador da Criptografia Alimetrica</strong></h1>
+        <img class="icon" src="./images/alimetrica.ico" alt="Imagem da Criptografia Alimetrica">
+        <h2>Versão 1 criada por zF4ke#8556</h2>
+        <h4>A versão é nova? não sei. Funciona? também não sei...<p id="errors" style="color: #D24D2F;"></p>
+        </h4>
+
+        <!-- TOOL -->
+        <ul class="centerwrapper">
+            <div class="area">
+                <textarea id="encodedData" placeholder="QIKEKW KI LWBWUUW" rows="20" cols="70"
+                    style="height: 25vh;"></textarea>
+            </div>
+            <div class="centerwrapper">
+                <input type="button" class="btn" value="Analisar" onclick="doAnalyze()">
+            </div>
+            <div class="area">
+                <textarea id="decodedData" placeholder="*Possibilidades*" rows="70" cols="70" style="height: 35vh;"
+                    readonly></textarea>
+            </div>
+            <div class="befooter"></div>
+
+            <!-- FOOTER -->
+            <%- include ('./partials/footer') %>
+
+                <script src="./scripts/alimetrica.js"></script>
+                <script src="./scripts/scroll.js"></script>
+
+</body>
+
+</html>
